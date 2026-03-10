@@ -1,1 +1,154 @@
 @import "tailwindcss";
+
+/* Prism.js One Dark theme (minimal) */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #abb2bf;
+  font-family: "Fira Code", "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  tab-size: 2;
+  hyphens: none;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #5c6370;
+}
+
+.token.punctuation {
+  color: #abb2bf;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #e06c75;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #98c379;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #56b6c2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #c678dd;
+}
+
+.token.function,
+.token.class-name {
+  color: #61afef;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #d19a66;
+}
+
+/* Lecture content typography */
+.lecture-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lecture-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.lecture-content p {
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.lecture-content ul,
+.lecture-content ol {
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.lecture-content ul {
+  list-style-type: disc;
+}
+
+.lecture-content ol {
+  list-style-type: decimal;
+}
+
+.lecture-content li {
+  margin-bottom: 0.25rem;
+}
+
+.lecture-content strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.lecture-content code:not([class*="language-"]) {
+  background-color: #f3f4f6;
+  color: #e06c75;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: "Fira Code", "Consolas", monospace;
+}
+
+.lecture-content a {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.lecture-content a:hover {
+  color: #3730a3;
+}
+
+.lecture-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.lecture-content th,
+.lecture-content td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.lecture-content th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
