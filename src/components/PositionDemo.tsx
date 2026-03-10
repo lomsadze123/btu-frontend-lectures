@@ -12,8 +12,14 @@ const PositionDemo = () => {
       value: "absolute",
       desc: "Removed from flow, positioned relative to nearest positioned parent",
     },
-    { value: "fixed", desc: "Positioned relative to the viewport (browser window)" },
-    { value: "sticky", desc: "Toggles between relative and fixed based on scroll" },
+    {
+      value: "fixed",
+      desc: "Positioned relative to the viewport (browser window)",
+    },
+    {
+      value: "sticky",
+      desc: "Toggles between relative and fixed based on scroll",
+    },
   ];
 
   return (

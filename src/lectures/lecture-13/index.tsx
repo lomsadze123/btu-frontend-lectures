@@ -26,8 +26,8 @@ const Lecture13 = () => {
           deal with that later" and keeps running the rest of your code.
         </p>
         <p>
-          Today we are going to learn how JavaScript handles this magic. This
-          is one of the most important topics in all of frontend development!
+          Today we are going to learn how JavaScript handles this magic. This is
+          one of the most important topics in all of frontend development!
         </p>
       </section>
 
@@ -174,9 +174,9 @@ console.log("3. Check phone while waiting");
         <h2>Callbacks: The Old-School Way</h2>
         <p>
           A <strong>callback</strong> is just a function you give to another
-          function, saying: "Hey, when you are done, call this function with
-          the result." It is like leaving your phone number at the coffee shop
-          so they can text you when your order is ready.
+          function, saying: "Hey, when you are done, call this function with the
+          result." It is like leaving your phone number at the coffee shop so
+          they can text you when your order is ready.
         </p>
 
         <JsConsole
@@ -314,7 +314,9 @@ console.log("(Meanwhile, the waiter serves other tables)");`}
               label: "Parameters",
             },
             { code: " => {\n" },
-            { code: '    console.log("Preparing " + topping + " pizza...");\n' },
+            {
+              code: '    console.log("Preparing " + topping + " pizza...");\n',
+            },
             { code: "    const isAvailable = Math.random() > 0.2;\n\n" },
             { code: "    if (isAvailable) {\n" },
             {
@@ -361,9 +363,9 @@ console.log("It is a Promise! We need .then() to get the result.");`}
       <section>
         <h2>Consuming Promises: .then(), .catch(), .finally()</h2>
         <p>
-          A Promise by itself does not do much. You need to tell JavaScript
-          what to do when it resolves or rejects. That is where these three
-          methods come in.
+          A Promise by itself does not do much. You need to tell JavaScript what
+          to do when it resolves or rejects. That is where these three methods
+          come in.
         </p>
 
         <Diagram title="Promise Consumer Methods">
@@ -391,8 +393,8 @@ console.log("It is a Promise! We need .then() to get the result.");`}
                   item.color === "green"
                     ? "border-green-300 bg-green-50"
                     : item.color === "red"
-                    ? "border-red-300 bg-red-50"
-                    : "border-blue-300 bg-blue-50"
+                      ? "border-red-300 bg-red-50"
+                      : "border-blue-300 bg-blue-50"
                 }`}
               >
                 <code
@@ -400,8 +402,8 @@ console.log("It is a Promise! We need .then() to get the result.");`}
                     item.color === "green"
                       ? "text-green-700"
                       : item.color === "red"
-                      ? "text-red-700"
-                      : "text-blue-700"
+                        ? "text-red-700"
+                        : "text-blue-700"
                   }`}
                 >
                   {item.method}
@@ -497,9 +499,7 @@ fetchGrade("Batman")
                 <div className="ml-2">.then(r =&gt; step3(r))</div>
                 <div className="ml-2">.then(r =&gt; step4(r))</div>
                 <div className="ml-2">.catch(err =&gt; handle(err))</div>
-                <div className="text-green-500 mt-1">
-                  // flat and readable!
-                </div>
+                <div className="text-green-500 mt-1">// flat and readable!</div>
               </div>
             </div>
           </div>
@@ -554,8 +554,8 @@ getUser(1)
       <section>
         <h2>Promise.all() and Promise.race(): Running in Parallel</h2>
         <p>
-          Sometimes you need to do multiple async things at the same time.
-          Why wait for one to finish before starting the next?
+          Sometimes you need to do multiple async things at the same time. Why
+          wait for one to finish before starting the next?
         </p>
 
         <Diagram title="Promise.all() vs Promise.race()">
@@ -675,7 +675,7 @@ Promise.race([fast, slow])
                   "Returns a promise that resolves after 1000ms. Use setTimeout inside the promise.",
                 label: "delay()",
               },
-              { code: "\n  .then(() => { console.log(\"1 second\"); " },
+              { code: '\n  .then(() => { console.log("1 second"); ' },
               {
                 code: "return delay(1000);",
                 annotation:

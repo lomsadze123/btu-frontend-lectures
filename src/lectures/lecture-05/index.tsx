@@ -23,7 +23,8 @@ const Lecture05 = () => {
           We will also explore <strong>pseudo-classes</strong> (styling elements
           based on what is <em>happening</em> to them),{" "}
           <strong>pseudo-elements</strong> (sneaking in extra decorations), and{" "}
-          <strong>CSS animations</strong> (making things move, bounce, and spin).
+          <strong>CSS animations</strong> (making things move, bounce, and
+          spin).
         </p>
         <p>
           Buckle up -- by the end of this lecture, your pages will have
@@ -38,8 +39,8 @@ const Lecture05 = () => {
           Flexbox is great when things flow in <em>one direction</em> (a row or
           a column). But what if you need a header spanning the full width, a
           sidebar on the left, content on the right, and a footer at the bottom
-          -- all at once? That is a <strong>two-dimensional</strong> problem, and
-          Grid was built exactly for it.
+          -- all at once? That is a <strong>two-dimensional</strong> problem,
+          and Grid was built exactly for it.
         </p>
 
         <Diagram title="Flexbox (1D) vs Grid (2D)">
@@ -273,8 +274,7 @@ const Lecture05 = () => {
               code: ".page-layout {\n  display: grid;\n",
             },
             {
-              code:
-                '  grid-template-areas:\n    "header  header  header"\n    "sidebar content content"\n    "footer  footer  footer";\n',
+              code: '  grid-template-areas:\n    "header  header  header"\n    "sidebar content content"\n    "footer  footer  footer";\n',
               annotation:
                 "You literally draw the layout with names! Each quoted string is a row. Repeating a name (like 'header' three times) makes that area span those columns. It is like ASCII art that the browser turns into a real layout.",
               label: "Template areas",
@@ -401,8 +401,7 @@ const Lecture05 = () => {
                   everything except
                 </li>
                 <li>
-                  <code className="text-orange-600">:empty</code> -- no
-                  children
+                  <code className="text-orange-600">:empty</code> -- no children
                 </li>
                 <li>
                   <code className="text-orange-600">:checked</code> -- checked
@@ -887,7 +886,7 @@ const Lecture05 = () => {
               code: "}\n\n",
             },
             {
-              code: ".card::before {\n  content: \"\";\n  position: absolute;\n  top: 0; left: 0; right: 0;\n  height: 4px;\n  background: linear-gradient(to right, #3498db, #9b59b6);\n  transform: scaleX(0);\n  transition: transform 0.3s ease;\n}\n",
+              code: '.card::before {\n  content: "";\n  position: absolute;\n  top: 0; left: 0; right: 0;\n  height: 4px;\n  background: linear-gradient(to right, #3498db, #9b59b6);\n  transform: scaleX(0);\n  transition: transform 0.3s ease;\n}\n',
               annotation:
                 "A gradient bar at the top of each card, initially scaled to 0 width (invisible). It will expand on hover -- a slick decorative touch!",
               label: "::before decoration",
@@ -927,7 +926,8 @@ const Lecture05 = () => {
               <code>grid-column: span 2</code>.
             </li>
             <li>
-              Use <code>:nth-child(even)</code> for alternating card backgrounds.
+              Use <code>:nth-child(even)</code> for alternating card
+              backgrounds.
             </li>
             <li>
               Add a <code>::after</code> underline on card headings that expands
@@ -948,7 +948,8 @@ const Lecture05 = () => {
             </li>
             <li>Add hover transitions on sidebar links.</li>
             <li>
-              Use <code>::before</code> to add decorative icons before nav links.
+              Use <code>::before</code> to add decorative icons before nav
+              links.
             </li>
           </ul>
         </ExerciseBlock>

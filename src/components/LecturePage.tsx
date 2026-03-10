@@ -4,11 +4,16 @@ import { lectures } from "../data/lectures";
 
 const lectureModules = import.meta.glob("../lectures/lecture-*/index.tsx");
 
-const lazyLectures: Record<string, React.LazyExoticComponent<React.ComponentType>> = {};
+const lazyLectures: Record<
+  string,
+  React.LazyExoticComponent<React.ComponentType>
+> = {};
 for (const [path, loader] of Object.entries(lectureModules)) {
   const match = path.match(/lecture-(\d+)/);
   if (match) {
-    lazyLectures[match[1]] = lazy(loader as () => Promise<{ default: React.ComponentType }>);
+    lazyLectures[match[1]] = lazy(
+      loader as () => Promise<{ default: React.ComponentType }>,
+    );
   }
 }
 

@@ -43,9 +43,7 @@ const FlexboxPlayground = () => {
     <div className="my-6 rounded-lg overflow-hidden border-2 border-cyan-500/30 bg-gray-50 p-6">
       <div className="flex items-center gap-2 mb-4">
         <span className="text-xl">🎯</span>
-        <h4 className="font-bold text-gray-800 text-lg">
-          Flexbox Playground
-        </h4>
+        <h4 className="font-bold text-gray-800 text-lg">Flexbox Playground</h4>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">

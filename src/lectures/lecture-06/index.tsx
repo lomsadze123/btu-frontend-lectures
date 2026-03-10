@@ -22,9 +22,9 @@ const Lecture06 = () => {
         <p>
           Today you will learn how to make websites that flow like water --
           adapting to phones, tablets, laptops, and giant desktop monitors. We
-          will also tackle <strong>CSS positioning</strong>, which lets you stick
-          navbars to the top, float badges in corners, and layer elements on top
-          of each other.
+          will also tackle <strong>CSS positioning</strong>, which lets you
+          stick navbars to the top, float badges in corners, and layer elements
+          on top of each other.
         </p>
       </section>
 
@@ -76,9 +76,12 @@ const Lecture06 = () => {
       <section>
         <h2>Media Queries: CSS "If Statements"</h2>
         <p>
-          Media queries let you say: <em>"Hey browser, IF the screen is
-          narrower than 768px, use THESE styles instead."</em> They are like
-          if-statements for CSS. Here is the basic syntax:
+          Media queries let you say:{" "}
+          <em>
+            "Hey browser, IF the screen is narrower than 768px, use THESE styles
+            instead."
+          </em>{" "}
+          They are like if-statements for CSS. Here is the basic syntax:
         </p>
 
         <AnnotatedCode
@@ -103,9 +106,9 @@ const Lecture06 = () => {
         <p>
           There are two approaches. <strong>Mobile-first</strong> means you
           write styles for the smallest screen, then use <code>min-width</code>{" "}
-          to add complexity for larger screens. <strong>Desktop-first</strong> is
-          the opposite: write for big screens, then use <code>max-width</code>{" "}
-          to scale down.
+          to add complexity for larger screens. <strong>Desktop-first</strong>{" "}
+          is the opposite: write for big screens, then use{" "}
+          <code>max-width</code> to scale down.
         </p>
 
         <Diagram title="Mobile-First vs Desktop-First">
@@ -372,8 +375,8 @@ const Lecture06 = () => {
         <p>
           <code>position: relative</code> keeps the element in its normal spot
           but lets you <em>nudge</em> it with top/left/bottom/right. The key
-          trick: <strong>the original space is preserved</strong>. Other elements
-          act as if it never moved.
+          trick: <strong>the original space is preserved</strong>. Other
+          elements act as if it never moved.
         </p>
 
         <AnnotatedCode
@@ -551,8 +554,8 @@ const Lecture06 = () => {
         <h2>Position Playground -- Your Turn!</h2>
         <p>
           Use this interactive demo to experiment with all 5 position values.
-          Toggle between static, relative, absolute, fixed, and sticky. See
-          what happens when you change top, left, and z-index values.
+          Toggle between static, relative, absolute, fixed, and sticky. See what
+          happens when you change top, left, and z-index values.
         </p>
         <PositionDemo />
       </section>
@@ -612,8 +615,7 @@ const Lecture06 = () => {
           </p>
           <ul>
             <li>
-              Card container (350px wide) with{" "}
-              <code>position: relative</code>.
+              Card container (350px wide) with <code>position: relative</code>.
             </li>
             <li>
               "SALE" badge in top-right with <code>position: absolute</code>.
@@ -632,8 +634,8 @@ const Lecture06 = () => {
 
         <ExerciseBlock number={3}>
           <p>
-            Build a{" "}
-            <strong>fully responsive three-section landing page</strong>:
+            Build a <strong>fully responsive three-section landing page</strong>
+            :
           </p>
           <ul>
             <li>
@@ -644,9 +646,7 @@ const Lecture06 = () => {
               desktop.
             </li>
             <li>Footer with centered text.</li>
-            <li>
-              Mobile-first with at least 2 breakpoints (768px, 1024px).
-            </li>
+            <li>Mobile-first with at least 2 breakpoints (768px, 1024px).</li>
           </ul>
         </ExerciseBlock>
       </section>
@@ -665,8 +665,8 @@ const Lecture06 = () => {
           </li>
           <li>
             "Recent Posts" section with 3 blog cards -- stacked on mobile, side
-            by side on tablet (768px+). Each card has a category badge positioned
-            absolutely.
+            by side on tablet (768px+). Each card has a category badge
+            positioned absolutely.
           </li>
           <li>
             All images responsive (<code>max-width: 100%</code>).

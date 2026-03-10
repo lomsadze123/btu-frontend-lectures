@@ -16,7 +16,8 @@ const Lecture10 = () => {
           Last week we worked with single values -- strings, numbers, booleans.
           But real-world data is rarely that simple. A person has a name, age,
           email, hobbies, and more. <strong>Objects</strong> let you group
-          related data together under one name using <strong>key-value pairs</strong>.
+          related data together under one name using{" "}
+          <strong>key-value pairs</strong>.
         </p>
 
         <AnnotatedCode
@@ -92,37 +93,59 @@ console.log(person);`}
       <section>
         <h2>Copying Objects: The Reference Trap</h2>
         <p>
-          When you assign an object to a new variable with <code>=</code>,
-          you are not copying the data -- you are creating another name for
-          the <em>same</em> object. Both variables point to the same place in
+          When you assign an object to a new variable with <code>=</code>, you
+          are not copying the data -- you are creating another name for the{" "}
+          <em>same</em> object. Both variables point to the same place in
           memory.
         </p>
 
         <Diagram title="Reference vs Copy">
           <div className="space-y-4">
             <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4">
-              <div className="font-bold text-red-300 mb-2">Assignment = Shared Reference</div>
+              <div className="font-bold text-red-300 mb-2">
+                Assignment = Shared Reference
+              </div>
               <div className="flex items-center justify-center gap-4 text-sm">
-                <div className="bg-gray-800 rounded px-3 py-1 text-gray-300">original</div>
+                <div className="bg-gray-800 rounded px-3 py-1 text-gray-300">
+                  original
+                </div>
                 <div className="text-gray-500">&rarr;</div>
                 <div className="bg-gray-700 rounded px-4 py-2 text-center border border-gray-600">
-                  <div className="text-yellow-300 font-mono text-xs">{"{ name: 'Alice' }"}</div>
-                  <div className="text-xs text-gray-500 mt-1">Same object in memory</div>
+                  <div className="text-yellow-300 font-mono text-xs">
+                    {"{ name: 'Alice' }"}
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    Same object in memory
+                  </div>
                 </div>
                 <div className="text-gray-500">&larr;</div>
-                <div className="bg-gray-800 rounded px-3 py-1 text-gray-300">copy</div>
+                <div className="bg-gray-800 rounded px-3 py-1 text-gray-300">
+                  copy
+                </div>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-3">
-                <div className="font-bold text-yellow-300 text-sm mb-1">Shallow Copy (spread)</div>
-                <div className="text-xs text-gray-300">Copies top-level properties. Nested objects are still shared.</div>
-                <code className="text-xs text-gray-400 mt-1 block">{"const b = { ...a };"}</code>
+                <div className="font-bold text-yellow-300 text-sm mb-1">
+                  Shallow Copy (spread)
+                </div>
+                <div className="text-xs text-gray-300">
+                  Copies top-level properties. Nested objects are still shared.
+                </div>
+                <code className="text-xs text-gray-400 mt-1 block">
+                  {"const b = { ...a };"}
+                </code>
               </div>
               <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-3">
-                <div className="font-bold text-green-300 text-sm mb-1">Deep Copy (structuredClone)</div>
-                <div className="text-xs text-gray-300">Copies everything recursively. Fully independent.</div>
-                <code className="text-xs text-gray-400 mt-1 block">{"const b = structuredClone(a);"}</code>
+                <div className="font-bold text-green-300 text-sm mb-1">
+                  Deep Copy (structuredClone)
+                </div>
+                <div className="text-xs text-gray-300">
+                  Copies everything recursively. Fully independent.
+                </div>
+                <code className="text-xs text-gray-400 mt-1 block">
+                  {"const b = structuredClone(a);"}
+                </code>
               </div>
             </div>
           </div>
@@ -187,7 +210,7 @@ console.log("nested city still:", nested.address.city);  // "Batumi" (safe!)`}
                 'Indexes start at 0, so fruits[0] is "apple", fruits[1] is "banana", etc.',
               label: "index access",
             },
-            { code: ";      // \"apple\"\n" },
+            { code: ';      // "apple"\n' },
             {
               code: "fruits.length",
               annotation:
@@ -196,7 +219,7 @@ console.log("nested city still:", nested.address.city);  // "Batumi" (safe!)`}
             },
             { code: ";  // 3\n" },
             {
-              code: "fruits.push(\"date\")",
+              code: 'fruits.push("date")',
               annotation: "push() adds an item to the END of the array.",
               label: "push",
             },
@@ -208,7 +231,7 @@ console.log("nested city still:", nested.address.city);  // "Batumi" (safe!)`}
             },
             { code: ";\n" },
             {
-              code: "fruits.unshift(\"avocado\")",
+              code: 'fruits.unshift("avocado")',
               annotation: "unshift() adds an item to the BEGINNING.",
               label: "unshift",
             },
@@ -253,31 +276,49 @@ console.log("After shift:", colors);`}
         <Diagram title="map, filter, reduce at a Glance">
           <div className="space-y-3">
             <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4">
-              <div className="font-bold text-blue-300 mb-1">map -- Transform Every Element</div>
+              <div className="font-bold text-blue-300 mb-1">
+                map -- Transform Every Element
+              </div>
               <div className="flex items-center gap-2 text-sm text-gray-300">
                 <code>[1, 2, 3]</code>
-                <span className="text-gray-500">&rarr; .map(x =&gt; x * 2) &rarr;</span>
+                <span className="text-gray-500">
+                  &rarr; .map(x =&gt; x * 2) &rarr;
+                </span>
                 <code className="text-blue-300">[2, 4, 6]</code>
               </div>
-              <div className="text-xs text-gray-500 mt-1">Same length, different values</div>
+              <div className="text-xs text-gray-500 mt-1">
+                Same length, different values
+              </div>
             </div>
             <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
-              <div className="font-bold text-green-300 mb-1">filter -- Keep What Passes</div>
+              <div className="font-bold text-green-300 mb-1">
+                filter -- Keep What Passes
+              </div>
               <div className="flex items-center gap-2 text-sm text-gray-300">
                 <code>[1, 2, 3, 4]</code>
-                <span className="text-gray-500">&rarr; .filter(x =&gt; x &gt; 2) &rarr;</span>
+                <span className="text-gray-500">
+                  &rarr; .filter(x =&gt; x &gt; 2) &rarr;
+                </span>
                 <code className="text-green-300">[3, 4]</code>
               </div>
-              <div className="text-xs text-gray-500 mt-1">Same or fewer items, same values</div>
+              <div className="text-xs text-gray-500 mt-1">
+                Same or fewer items, same values
+              </div>
             </div>
             <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-4">
-              <div className="font-bold text-purple-300 mb-1">reduce -- Accumulate Into One Value</div>
+              <div className="font-bold text-purple-300 mb-1">
+                reduce -- Accumulate Into One Value
+              </div>
               <div className="flex items-center gap-2 text-sm text-gray-300">
                 <code>[10, 20, 30]</code>
-                <span className="text-gray-500">&rarr; .reduce((sum, x) =&gt; sum + x, 0) &rarr;</span>
+                <span className="text-gray-500">
+                  &rarr; .reduce((sum, x) =&gt; sum + x, 0) &rarr;
+                </span>
                 <code className="text-purple-300">60</code>
               </div>
-              <div className="text-xs text-gray-500 mt-1">Many items become one value</div>
+              <div className="text-xs text-gray-500 mt-1">
+                Many items become one value
+              </div>
             </div>
           </div>
         </Diagram>
@@ -333,8 +374,8 @@ fruits.forEach((fruit, i) => {
 
         <InfoBox type="info">
           <code>map</code>, <code>filter</code>, and <code>reduce</code> never
-          mutate the original array. They return new values. This is critical
-          in React, where you should never mutate state directly.
+          mutate the original array. They return new values. This is critical in
+          React, where you should never mutate state directly.
         </InfoBox>
       </section>
 
@@ -345,26 +386,32 @@ fruits.forEach((fruit, i) => {
         <Diagram title="JavaScript Operators">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-3">
-              <div className="font-bold text-blue-300 text-sm mb-2">Arithmetic</div>
+              <div className="font-bold text-blue-300 text-sm mb-2">
+                Arithmetic
+              </div>
               <div className="space-y-1 text-xs text-gray-300 font-mono">
-                <div>+  -  *  /</div>
-                <div>%  (remainder)</div>
+                <div>+ - * /</div>
+                <div>% (remainder)</div>
                 <div>** (power)</div>
               </div>
             </div>
             <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-3">
-              <div className="font-bold text-green-300 text-sm mb-2">Comparison</div>
+              <div className="font-bold text-green-300 text-sm mb-2">
+                Comparison
+              </div>
               <div className="space-y-1 text-xs text-gray-300 font-mono">
-                <div>===  !==  (strict)</div>
-                <div>&gt;  &lt;  &gt;=  &lt;=</div>
+                <div>=== !== (strict)</div>
+                <div>&gt; &lt; &gt;= &lt;=</div>
               </div>
             </div>
             <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-3">
-              <div className="font-bold text-yellow-300 text-sm mb-2">Logical</div>
+              <div className="font-bold text-yellow-300 text-sm mb-2">
+                Logical
+              </div>
               <div className="space-y-1 text-xs text-gray-300 font-mono">
                 <div>&amp;&amp; (AND)</div>
-                <div>||  (OR)</div>
-                <div>!   (NOT)</div>
+                <div>|| (OR)</div>
+                <div>! (NOT)</div>
               </div>
             </div>
           </div>
@@ -404,21 +451,21 @@ console.log(!true);          // false (NOT)`}
                 "The condition inside parentheses is evaluated as a boolean. If true, the block runs.",
               label: "condition",
             },
-            { code: " {\n  console.log(\"A\");\n} " },
+            { code: ' {\n  console.log("A");\n} ' },
             {
               code: "else if (score >= 80)",
               annotation:
                 "If the first condition was false, this condition is checked next. You can chain as many else-if blocks as you need.",
               label: "else if",
             },
-            { code: " {\n  console.log(\"B\");\n} " },
+            { code: ' {\n  console.log("B");\n} ' },
             {
               code: "else",
               annotation:
                 "The else block runs only if ALL previous conditions were false. It is the catch-all.",
               label: "else",
             },
-            { code: " {\n  console.log(\"F\");\n}" },
+            { code: ' {\n  console.log("F");\n}' },
           ]}
         />
 
@@ -459,22 +506,45 @@ switch (day) {
         <h2>Loops: Repeating Code</h2>
         <p>
           Loops let you run a block of code multiple times. The most common
-          pattern is iterating over an array, but loops are useful any time
-          you need repetition.
+          pattern is iterating over an array, but loops are useful any time you
+          need repetition.
         </p>
 
         <Diagram title="Choosing the Right Loop">
           <div className="space-y-2">
             {[
-              { loop: "for", when: "When you know how many iterations", example: "for (let i = 0; i < 5; i++)" },
-              { loop: "while", when: "When you don't know how many iterations", example: "while (condition)" },
-              { loop: "for...of", when: "Iterating over array VALUES", example: "for (const item of array)" },
-              { loop: "for...in", when: "Iterating over object KEYS", example: "for (const key in object)" },
+              {
+                loop: "for",
+                when: "When you know how many iterations",
+                example: "for (let i = 0; i < 5; i++)",
+              },
+              {
+                loop: "while",
+                when: "When you don't know how many iterations",
+                example: "while (condition)",
+              },
+              {
+                loop: "for...of",
+                when: "Iterating over array VALUES",
+                example: "for (const item of array)",
+              },
+              {
+                loop: "for...in",
+                when: "Iterating over object KEYS",
+                example: "for (const key in object)",
+              },
             ].map((item) => (
-              <div key={item.loop} className="flex items-center gap-3 bg-gray-800/50 rounded-lg p-3">
-                <code className="text-indigo-300 font-bold text-sm w-20 shrink-0">{item.loop}</code>
+              <div
+                key={item.loop}
+                className="flex items-center gap-3 bg-gray-800/50 rounded-lg p-3"
+              >
+                <code className="text-indigo-300 font-bold text-sm w-20 shrink-0">
+                  {item.loop}
+                </code>
                 <div className="text-sm text-gray-300 flex-1">{item.when}</div>
-                <code className="text-xs text-gray-500 hidden md:block">{item.example}</code>
+                <code className="text-xs text-gray-500 hidden md:block">
+                  {item.example}
+                </code>
               </div>
             ))}
           </div>
@@ -508,10 +578,10 @@ for (let i = 0; i < 10; i++) {
         />
 
         <InfoBox type="tip">
-          Use <code>for...of</code> for <strong>arrays</strong> (gives
-          values). Use <code>for...in</code> for <strong>objects</strong>{" "}
-          (gives keys). Do not use <code>for...in</code> on arrays -- it can
-          produce unexpected results.
+          Use <code>for...of</code> for <strong>arrays</strong> (gives values).
+          Use <code>for...in</code> for <strong>objects</strong> (gives keys).
+          Do not use <code>for...in</code> on arrays -- it can produce
+          unexpected results.
         </InfoBox>
       </section>
 
@@ -557,12 +627,30 @@ console.log("\\nHonor Roll:", honorRoll);`}
       <section>
         <h2>Key Takeaways</h2>
         <ul>
-          <li>Objects store data in key-value pairs. Access with dot or bracket notation.</li>
-          <li>Assigning an object to a new variable copies the <strong>reference</strong>, not the data. Use spread for shallow copies, <code>structuredClone()</code> for deep copies.</li>
-          <li>Arrays are ordered lists (0-indexed). push/pop for end, shift/unshift for beginning.</li>
-          <li><code>map</code> (transform), <code>filter</code> (select), <code>reduce</code> (accumulate) -- the big three.</li>
-          <li><code>if/else</code> for conditionals, ternary for inline, <code>switch</code> for multiple values.</li>
-          <li><code>for...of</code> for arrays, <code>for...in</code> for objects.</li>
+          <li>
+            Objects store data in key-value pairs. Access with dot or bracket
+            notation.
+          </li>
+          <li>
+            Assigning an object to a new variable copies the{" "}
+            <strong>reference</strong>, not the data. Use spread for shallow
+            copies, <code>structuredClone()</code> for deep copies.
+          </li>
+          <li>
+            Arrays are ordered lists (0-indexed). push/pop for end,
+            shift/unshift for beginning.
+          </li>
+          <li>
+            <code>map</code> (transform), <code>filter</code> (select),{" "}
+            <code>reduce</code> (accumulate) -- the big three.
+          </li>
+          <li>
+            <code>if/else</code> for conditionals, ternary for inline,{" "}
+            <code>switch</code> for multiple values.
+          </li>
+          <li>
+            <code>for...of</code> for arrays, <code>for...in</code> for objects.
+          </li>
         </ul>
       </section>
 
@@ -570,12 +658,26 @@ console.log("\\nHonor Roll:", honorRoll);`}
       <ExerciseBlock number={1}>
         <p>Create a "Contact Book" using objects and arrays:</p>
         <ul>
-          <li>Create an array of 5 contact objects (name, phone, email, city, isFavorite).</li>
-          <li>Use <code>filter</code> to get only favorite contacts.</li>
-          <li>Use <code>find</code> to search for a contact by name.</li>
-          <li>Use <code>map</code> to create an array of just the names.</li>
-          <li>Use <code>for...of</code> to log each contact's name and city.</li>
-          <li>Add a new contact with <code>push</code>, remove the last with <code>pop</code>.</li>
+          <li>
+            Create an array of 5 contact objects (name, phone, email, city,
+            isFavorite).
+          </li>
+          <li>
+            Use <code>filter</code> to get only favorite contacts.
+          </li>
+          <li>
+            Use <code>find</code> to search for a contact by name.
+          </li>
+          <li>
+            Use <code>map</code> to create an array of just the names.
+          </li>
+          <li>
+            Use <code>for...of</code> to log each contact's name and city.
+          </li>
+          <li>
+            Add a new contact with <code>push</code>, remove the last with{" "}
+            <code>pop</code>.
+          </li>
         </ul>
       </ExerciseBlock>
 
@@ -583,9 +685,15 @@ console.log("\\nHonor Roll:", honorRoll);`}
         <p>Build a "Shopping Cart Calculator":</p>
         <ul>
           <li>Create an array of product objects (name, price, quantity).</li>
-          <li>Use <code>map</code> to add a <code>subtotal</code> property.</li>
-          <li>Use <code>reduce</code> to calculate the grand total.</li>
-          <li>Use <code>filter</code> to find expensive products (price &gt; 30).</li>
+          <li>
+            Use <code>map</code> to add a <code>subtotal</code> property.
+          </li>
+          <li>
+            Use <code>reduce</code> to calculate the grand total.
+          </li>
+          <li>
+            Use <code>filter</code> to find expensive products (price &gt; 30).
+          </li>
           <li>Log a formatted receipt using a loop.</li>
           <li>Demonstrate shallow copy with spread.</li>
         </ul>
@@ -596,10 +704,18 @@ console.log("\\nHonor Roll:", honorRoll);`}
         <ul>
           <li>Create an array of 15 numbers (positive, negative, and zero).</li>
           <li>Count positives, negatives, and zeros with a loop + if/else.</li>
-          <li>Use <code>filter</code> to separate positives and negatives.</li>
-          <li>Use <code>reduce</code> to find the sum.</li>
-          <li>Use <code>break</code> to find the first negative number.</li>
-          <li>Use <code>continue</code> to log only even numbers.</li>
+          <li>
+            Use <code>filter</code> to separate positives and negatives.
+          </li>
+          <li>
+            Use <code>reduce</code> to find the sum.
+          </li>
+          <li>
+            Use <code>break</code> to find the first negative number.
+          </li>
+          <li>
+            Use <code>continue</code> to log only even numbers.
+          </li>
         </ul>
       </ExerciseBlock>
 
@@ -613,17 +729,17 @@ console.log("\\nHonor Roll:", honorRoll);`}
             grades (object), enrollmentYear, isActive.
           </li>
           <li>
-            <strong>Part 2:</strong> Use <code>map</code> +{" "}
-            <code>reduce</code> to add an <code>averageGrade</code> property.
+            <strong>Part 2:</strong> Use <code>map</code> + <code>reduce</code>{" "}
+            to add an <code>averageGrade</code> property.
           </li>
           <li>
-            <strong>Part 3:</strong> Use <code>filter</code> to find honor
-            roll (avg &gt; 85), active students, and students enrolled after a
-            given year.
+            <strong>Part 3:</strong> Use <code>filter</code> to find honor roll
+            (avg &gt; 85), active students, and students enrolled after a given
+            year.
           </li>
           <li>
-            <strong>Part 4:</strong> Use <code>find</code> to look up a
-            student by id. Handle "not found."
+            <strong>Part 4:</strong> Use <code>find</code> to look up a student
+            by id. Handle "not found."
           </li>
           <li>
             <strong>Part 5:</strong> Generate a formatted report with letter
@@ -635,8 +751,8 @@ console.log("\\nHonor Roll:", honorRoll);`}
           </li>
           <li>
             <strong>Part 7:</strong> Deep copy a student with{" "}
-            <code>structuredClone</code>, modify the copy, prove the original
-            is unchanged.
+            <code>structuredClone</code>, modify the copy, prove the original is
+            unchanged.
           </li>
         </ul>
       </HomeworkBlock>

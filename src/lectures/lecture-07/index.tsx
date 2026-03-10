@@ -20,10 +20,8 @@ const Lecture07 = () => {
         </p>
         <p>
           But here is the thing:{" "}
-          <strong>
-            AI is a power tool, not a replacement for your brain
-          </strong>
-          . A chainsaw helps a carpenter work faster, but you would not hand a
+          <strong>AI is a power tool, not a replacement for your brain</strong>.
+          A chainsaw helps a carpenter work faster, but you would not hand a
           chainsaw to someone who does not know which end of a board to cut.
           This lecture will teach you how to use AI effectively, ethically, and
           without accidentally becoming dependent on something you do not
@@ -136,9 +134,7 @@ const Lecture07 = () => {
                 key={tool.name}
                 className={`${tool.color} border-2 rounded-lg p-3 text-center`}
               >
-                <h4 className="font-bold text-sm text-gray-800">
-                  {tool.name}
-                </h4>
+                <h4 className="font-bold text-sm text-gray-800">{tool.name}</h4>
                 <p className="text-xs text-gray-500">{tool.by}</p>
                 <span className="inline-block mt-2 bg-white border border-gray-200 text-xs text-gray-600 px-2 py-0.5 rounded-full">
                   {tool.tag}
@@ -153,11 +149,11 @@ const Lecture07 = () => {
       <section>
         <h2>The Art of Prompting</h2>
         <p>
-          A <strong>prompt</strong> is what you type into an AI tool. The quality
-          of your prompt <em>directly</em> determines the quality of the output.
-          Bad prompt = bad code. Good prompt = surprisingly useful code. This is
-          called <strong>prompt engineering</strong>, and it is a genuine skill
-          worth developing.
+          A <strong>prompt</strong> is what you type into an AI tool. The
+          quality of your prompt <em>directly</em> determines the quality of the
+          output. Bad prompt = bad code. Good prompt = surprisingly useful code.
+          This is called <strong>prompt engineering</strong>, and it is a
+          genuine skill worth developing.
         </p>
 
         <h3>The Terrible Prompt vs The Great Prompt</h3>
@@ -261,8 +257,8 @@ const Lecture07 = () => {
         <h2>What AI Can Actually Do (Real Examples)</h2>
         <p>
           Let's see real examples of AI-assisted code. As you look at each one,
-          think: <em>could I have built this myself? Do I understand every
-          line?</em>
+          think:{" "}
+          <em>could I have built this myself? Do I understand every line?</em>
         </p>
 
         <h3>Example 1: AI-Generated Color Scheme</h3>
@@ -377,9 +373,7 @@ const Lecture07 = () => {
               </ul>
             </div>
             <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4">
-              <h4 className="text-red-700 font-bold mb-3">
-                DON'T Use AI For:
-              </h4>
+              <h4 className="text-red-700 font-bold mb-3">DON'T Use AI For:</h4>
               <ul className="text-sm text-gray-700 space-y-2">
                 <li>Submitting work you don't understand</li>
                 <li>Skipping learning fundamentals</li>
@@ -415,9 +409,9 @@ const Lecture07 = () => {
             Many instructors appreciate honesty.
           </li>
           <li>
-            <strong>The goal is learning</strong> -- AI that helps you understand
-            faster is great. AI that lets you skip understanding is harmful to
-            your career.
+            <strong>The goal is learning</strong> -- AI that helps you
+            understand faster is great. AI that lets you skip understanding is
+            harmful to your career.
           </li>
         </ul>
       </section>
@@ -654,9 +648,7 @@ const Lecture07 = () => {
               Write a comment above every CSS rule explaining what it does and
               why.
             </li>
-            <li>
-              Identify which course concepts (weeks 1-6) are used.
-            </li>
+            <li>Identify which course concepts (weeks 1-6) are used.</li>
             <li>
               List which parts you could write yourself vs. which you would need
               to look up.
@@ -668,9 +660,7 @@ const Lecture07 = () => {
       {/* ── Homework ── */}
       <HomeworkBlock>
         <h3>AI-Assisted Portfolio Project</h3>
-        <p>
-          Complete this project with full documentation of your AI usage:
-        </p>
+        <p>Complete this project with full documentation of your AI usage:</p>
         <ol>
           <li>
             <strong>Write a prompt</strong> asking AI to generate a "Student

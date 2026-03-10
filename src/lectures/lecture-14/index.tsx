@@ -20,10 +20,10 @@ const Lecture14 = () => {
           time you open it.
         </p>
         <p>
-          Today we learn how to do exactly that: <strong>fetch data from
-          the internet</strong> and display it on a page. We will also learn{" "}
-          <code>async/await</code>, which makes asynchronous code look clean
-          and beautiful.
+          Today we learn how to do exactly that:{" "}
+          <strong>fetch data from the internet</strong> and display it on a
+          page. We will also learn <code>async/await</code>, which makes
+          asynchronous code look clean and beautiful.
         </p>
       </section>
 
@@ -93,9 +93,10 @@ const Lecture14 = () => {
       <section>
         <h2>JSON: The Language APIs Speak</h2>
         <p>
-          When a server sends you data, it comes as a <strong>JSON
-          string</strong> -- which looks almost like a JavaScript object, but
-          it is just text. You need to <strong>parse</strong> it to use it.
+          When a server sends you data, it comes as a{" "}
+          <strong>JSON string</strong> -- which looks almost like a JavaScript
+          object, but it is just text. You need to <strong>parse</strong> it to
+          use it.
         </p>
 
         <JsConsole
@@ -132,9 +133,9 @@ console.log("Pretty:\\n" + JSON.stringify(product, null, 2));`}
       <section>
         <h2>The Fetch API: Getting Data from a Server</h2>
         <p>
-          <code>fetch()</code> is built into every modern browser. You give it
-          a URL, and it returns a <strong>Promise</strong> that resolves with
-          the server's response.
+          <code>fetch()</code> is built into every modern browser. You give it a
+          URL, and it returns a <strong>Promise</strong> that resolves with the
+          server's response.
         </p>
 
         <AnnotatedCode
@@ -197,8 +198,7 @@ console.log("Pretty:\\n" + JSON.stringify(product, null, 2));`}
           segments={[
             {
               code: "fetch(url)",
-              annotation:
-                "Start the request. This returns a Promise.",
+              annotation: "Start the request. This returns a Promise.",
               label: "Request",
             },
             { code: "\n  .then(response => {\n" },
@@ -241,14 +241,14 @@ console.log("Pretty:\\n" + JSON.stringify(product, null, 2));`}
           segments={[
             { code: "fetch(url, " },
             {
-              code: "{\n  method: \"POST\",",
+              code: '{\n  method: "POST",',
               annotation:
                 "By default, fetch uses GET. For POST, PUT, PATCH, or DELETE, you must specify the method explicitly.",
               label: "Method",
             },
             { code: "\n  " },
             {
-              code: "headers: {\n    \"Content-Type\": \"application/json\",\n  },",
+              code: 'headers: {\n    "Content-Type": "application/json",\n  },',
               annotation:
                 "This header tells the server 'I am sending you JSON data.' Without it, the server might not understand your request body.",
               label: "Headers",
@@ -291,9 +291,9 @@ console.log("usually including a new ID assigned by the server.");`}
 
         <InfoBox type="info">
           The <code>Content-Type: application/json</code> header tells the
-          server "I am sending you JSON data." And{" "}
-          <code>JSON.stringify()</code> converts your JavaScript object into a
-          JSON string for the request body.
+          server "I am sending you JSON data." And <code>JSON.stringify()</code>{" "}
+          converts your JavaScript object into a JSON string for the request
+          body.
         </InfoBox>
       </section>
 
@@ -352,8 +352,7 @@ console.log("usually including a new ID assigned by the server.");`}
             </div>
           </div>
           <p className="text-center text-sm text-gray-500 mt-4">
-            Both do the exact same thing. async/await just reads more
-            naturally.
+            Both do the exact same thing. async/await just reads more naturally.
           </p>
         </Diagram>
 
@@ -534,8 +533,8 @@ loadDashboard();`}
       <section>
         <h2>Displaying Fetched Data in HTML</h2>
         <p>
-          Fetching data is cool, but the real goal is to show it to users!
-          Here is the pattern for rendering fetched data into the DOM:
+          Fetching data is cool, but the real goal is to show it to users! Here
+          is the pattern for rendering fetched data into the DOM:
         </p>
 
         <AnnotatedCode
@@ -548,7 +547,9 @@ loadDashboard();`}
               label: "Async function",
             },
             { code: "\n" },
-            { code: '  const container = document.getElementById("container");\n' },
+            {
+              code: '  const container = document.getElementById("container");\n',
+            },
             {
               code: '  container.innerHTML = "<p>Loading...</p>";',
               annotation:
@@ -579,7 +580,7 @@ loadDashboard();`}
             },
             { code: "\n" },
             { code: '      const card = document.createElement("div");\n' },
-            { code: '      card.textContent = user.name;\n' },
+            { code: "      card.textContent = user.name;\n" },
             { code: "      container.appendChild(card);\n" },
             { code: "    });\n\n" },
             { code: "  } catch (err) {\n" },

@@ -148,10 +148,7 @@ const Lecture08 = () => {
                 fix: '<label for="email">Email</label><input id="email">',
               },
             ].map((item, i) => (
-              <div
-                key={i}
-                className="flex flex-col sm:flex-row gap-2 text-sm"
-              >
+              <div key={i} className="flex flex-col sm:flex-row gap-2 text-sm">
                 <div className="bg-red-50 border border-red-200 rounded px-3 py-2 flex-1">
                   <span className="text-red-600 font-bold">Mistake:</span>{" "}
                   {item.mistake}
@@ -365,9 +362,7 @@ const Lecture08 = () => {
               </ul>
             </div>
             <div className="bg-purple-50 border-2 border-purple-200 rounded-lg p-4">
-              <h4 className="text-purple-700 font-bold mb-2">
-                Use Grid when:
-              </h4>
+              <h4 className="text-purple-700 font-bold mb-2">Use Grid when:</h4>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>Layout is two-dimensional (rows AND columns)</li>
                 <li>Full page layouts</li>
@@ -424,8 +419,8 @@ const Lecture08 = () => {
         <h2>Round 5: Transitions & Animations</h2>
         <p>
           <strong>Transitions</strong> = smooth change from A to B (needs a
-          trigger like :hover). <strong>Keyframe animations</strong> = multi-step,
-          can play automatically.
+          trigger like :hover). <strong>Keyframe animations</strong> =
+          multi-step, can play automatically.
         </p>
 
         <Diagram title="Transition vs @keyframes at a glance">
@@ -492,8 +487,8 @@ const Lecture08 = () => {
         <InfoBox type="tip">
           For smooth animations, only animate <code>transform</code> and{" "}
           <code>opacity</code>. These are GPU-accelerated. Animating{" "}
-          <code>width</code>, <code>height</code>, or <code>margin</code>{" "}
-          causes layout recalculation and jank.
+          <code>width</code>, <code>height</code>, or <code>margin</code> causes
+          layout recalculation and jank.
         </InfoBox>
       </section>
 
@@ -503,11 +498,10 @@ const Lecture08 = () => {
 
         <InfoBox type="info">
           <strong>Quick Quiz:</strong> Name the 5 position values! Answer:{" "}
-          <code>static</code> (default, normal flow),{" "}
-          <code>relative</code> (nudge from normal position),{" "}
-          <code>absolute</code> (position within parent),{" "}
-          <code>fixed</code> (glued to viewport),{" "}
-          <code>sticky</code> (hybrid of relative + fixed).
+          <code>static</code> (default, normal flow), <code>relative</code>{" "}
+          (nudge from normal position), <code>absolute</code> (position within
+          parent), <code>fixed</code> (glued to viewport), <code>sticky</code>{" "}
+          (hybrid of relative + fixed).
         </InfoBox>
 
         <Diagram title="Responsive design essentials">
@@ -601,9 +595,7 @@ const Lecture08 = () => {
                   <code className="text-xs">{item.mistake}</code>
                 </div>
                 <div className="bg-green-50 border border-green-200 rounded px-3 py-2 text-sm">
-                  <span className="text-green-600 font-bold text-xs">
-                    FIX:
-                  </span>{" "}
+                  <span className="text-green-600 font-bold text-xs">FIX:</span>{" "}
                   <code className="text-xs">{item.fix}</code>
                 </div>
               </div>
@@ -722,9 +714,7 @@ const Lecture08 = () => {
                   {tip.num}
                 </div>
                 <h4 className="font-bold text-sm mb-1">{tip.title}</h4>
-                <p className="text-xs opacity-90 leading-relaxed">
-                  {tip.desc}
-                </p>
+                <p className="text-xs opacity-90 leading-relaxed">{tip.desc}</p>
               </div>
             ))}
           </div>
@@ -741,9 +731,7 @@ const Lecture08 = () => {
             complete page combining all concepts:
           </p>
           <ul>
-            <li>
-              Semantic HTML: header with nav, main with sections, footer.
-            </li>
+            <li>Semantic HTML: header with nav, main with sections, footer.</li>
             <li>Sticky navigation bar with restaurant name and 4 links.</li>
             <li>Hero section with clamp() typography.</li>
             <li>3 food cards in a responsive Grid/Flexbox layout.</li>
@@ -799,8 +787,8 @@ const Lecture08 = () => {
             Hero: background color, h1 with clamp(), date, "Register" button.
           </li>
           <li>
-            Speakers: 4 cards in responsive Grid. 2 cards have a "Keynote"
-            badge (absolute positioned).
+            Speakers: 4 cards in responsive Grid. 2 cards have a "Keynote" badge
+            (absolute positioned).
           </li>
           <li>Schedule: styled table or list with 5 sessions.</li>
           <li>
@@ -825,9 +813,7 @@ const Lecture08 = () => {
           <li>
             3 "Related Products" cards in responsive Grid with hover effects.
           </li>
-          <li>
-            A "SALE" badge on one card (absolute positioned).
-          </li>
+          <li>A "SALE" badge on one card (absolute positioned).</li>
           <li>Footer. Must look good from 320px to 1200px+.</li>
         </ul>
         <p>

@@ -6,7 +6,7 @@ const BoxModelDemo = () => {
   const [padding, setPadding] = useState(30);
   const [width, setWidth] = useState(150);
   const [boxSizing, setBoxSizing] = useState<"content-box" | "border-box">(
-    "content-box"
+    "content-box",
   );
 
   const totalWidth =
@@ -64,8 +64,7 @@ const BoxModelDemo = () => {
           <div>
             <label className="flex items-center justify-between text-sm font-medium text-gray-700">
               <span>
-                Padding:{" "}
-                <strong className="text-green-600">{padding}px</strong>
+                Padding: <strong className="text-green-600">{padding}px</strong>
               </span>
             </label>
             <input
@@ -112,7 +111,8 @@ const BoxModelDemo = () => {
 
           <div className="mt-3 p-3 bg-white rounded-lg border text-sm font-mono">
             <div className="text-gray-500">
-              Total space: <strong className="text-gray-900">{totalWidth}px</strong>
+              Total space:{" "}
+              <strong className="text-gray-900">{totalWidth}px</strong>
             </div>
             <div className="text-gray-500">
               Content area:{" "}

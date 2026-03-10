@@ -30,13 +30,17 @@ const Lecture09 = () => {
             <div className="flex-1 bg-orange-900/40 border border-orange-500/40 rounded-lg p-4 text-center">
               <div className="text-2xl mb-2">🦴</div>
               <div className="font-bold text-orange-300 mb-1">HTML</div>
-              <div className="text-sm text-gray-300">Structure &amp; Content</div>
+              <div className="text-sm text-gray-300">
+                Structure &amp; Content
+              </div>
               <div className="text-xs text-gray-500 mt-1">The skeleton</div>
             </div>
             <div className="flex-1 bg-blue-900/40 border border-blue-500/40 rounded-lg p-4 text-center">
               <div className="text-2xl mb-2">🎨</div>
               <div className="font-bold text-blue-300 mb-1">CSS</div>
-              <div className="text-sm text-gray-300">Presentation &amp; Style</div>
+              <div className="text-sm text-gray-300">
+                Presentation &amp; Style
+              </div>
               <div className="text-xs text-gray-500 mt-1">The clothing</div>
             </div>
             <div className="flex-1 bg-yellow-900/40 border border-yellow-500/40 rounded-lg p-4 text-center">
@@ -52,8 +56,8 @@ const Lecture09 = () => {
           JavaScript is officially called <strong>ECMAScript</strong>. When you
           see "ES6" or "ES2015," that refers to a version of the language
           specification. Modern JS (ES6+) introduced <code>let</code>,{" "}
-          <code>const</code>, arrow functions, template literals, and many
-          other features we will use throughout this course.
+          <code>const</code>, arrow functions, template literals, and many other
+          features we will use throughout this course.
         </InfoBox>
       </section>
 
@@ -84,8 +88,8 @@ const Lecture09 = () => {
         />
 
         <p>
-          Your very first debugging tool is <code>console.log()</code>. Think
-          of it as leaving sticky notes for yourself inside your code. Press{" "}
+          Your very first debugging tool is <code>console.log()</code>. Think of
+          it as leaving sticky notes for yourself inside your code. Press{" "}
           <strong>Run</strong> below to try it out.
         </p>
 
@@ -119,25 +123,42 @@ console.log("2 + 2 =", 2 + 2);`}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-purple-900/30 border border-purple-500/30 rounded-lg p-4">
               <div className="font-bold text-purple-300 mb-2">Expression</div>
-              <div className="text-sm text-gray-300 mb-2">Produces a value -- like a math problem</div>
+              <div className="text-sm text-gray-300 mb-2">
+                Produces a value -- like a math problem
+              </div>
               <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                <li><code>5 + 3</code> &rarr; 8</li>
-                <li><code>"Hi " + "there"</code> &rarr; "Hi there"</li>
-                <li><code>10 &gt; 5</code> &rarr; true</li>
+                <li>
+                  <code>5 + 3</code> &rarr; 8
+                </li>
+                <li>
+                  <code>"Hi " + "there"</code> &rarr; "Hi there"
+                </li>
+                <li>
+                  <code>10 &gt; 5</code> &rarr; true
+                </li>
               </ul>
             </div>
             <div className="bg-teal-900/30 border border-teal-500/30 rounded-lg p-4">
               <div className="font-bold text-teal-300 mb-2">Statement</div>
-              <div className="text-sm text-gray-300 mb-2">Performs an action -- like an instruction</div>
+              <div className="text-sm text-gray-300 mb-2">
+                Performs an action -- like an instruction
+              </div>
               <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                <li><code>let score = 100;</code></li>
-                <li><code>if (x &gt; 5) {"{ ... }"}</code></li>
-                <li><code>for (let i = 0; ...)</code></li>
+                <li>
+                  <code>let score = 100;</code>
+                </li>
+                <li>
+                  <code>if (x &gt; 5) {"{ ... }"}</code>
+                </li>
+                <li>
+                  <code>for (let i = 0; ...)</code>
+                </li>
               </ul>
             </div>
           </div>
           <p className="text-xs text-gray-500 mt-3 text-center">
-            Quick test: if you can place it on the right side of <code>=</code>, it is an expression.
+            Quick test: if you can place it on the right side of <code>=</code>,
+            it is an expression.
           </p>
         </Diagram>
 
@@ -163,8 +184,8 @@ console.log(result);`}
         <h2>Variables: let, const, and var</h2>
         <p>
           Variables are named containers for data. JavaScript offers three
-          keywords for creating them: <code>let</code>, <code>const</code>,
-          and the legacy <code>var</code>.
+          keywords for creating them: <code>let</code>, <code>const</code>, and
+          the legacy <code>var</code>.
         </p>
 
         <Diagram title="let vs const vs var">
@@ -199,8 +220,12 @@ console.log(result);`}
                 </tr>
                 <tr>
                   <td className="py-2 px-3">Recommendation</td>
-                  <td className="py-2 px-3 text-green-400 font-semibold">Default choice</td>
-                  <td className="py-2 px-3 text-blue-400">When you must reassign</td>
+                  <td className="py-2 px-3 text-green-400 font-semibold">
+                    Default choice
+                  </td>
+                  <td className="py-2 px-3 text-blue-400">
+                    When you must reassign
+                  </td>
                   <td className="py-2 px-3 text-red-400">Avoid</td>
                 </tr>
               </tbody>
@@ -232,7 +257,7 @@ console.log(result);`}
                 "var is the legacy keyword. It ignores block scope, can be re-declared, and hoists in confusing ways. Avoid it in modern code.",
               label: "var (legacy)",
             },
-            { code: "name = \"Bob\";\nvar name = \"Alice\";  " },
+            { code: 'name = "Bob";\nvar name = "Alice";  ' },
             { code: "// No error -- silently overwrites!" },
           ]}
         />
@@ -281,21 +306,32 @@ console.log(firstName, isLoggedIn, MAX_RETRY);`}
             <div className="w-full max-w-md bg-red-900/20 border-2 border-red-500/30 rounded-t-lg p-4 text-center">
               <div className="font-bold text-red-300">Global Scope</div>
               <div className="text-xs text-gray-400">Visible everywhere</div>
-              <code className="text-xs text-gray-300">const appName = "Demo";</code>
+              <code className="text-xs text-gray-300">
+                const appName = "Demo";
+              </code>
             </div>
             <div className="w-full max-w-sm bg-yellow-900/20 border-x-2 border-yellow-500/30 p-4 text-center">
               <div className="font-bold text-yellow-300">Function Scope</div>
-              <div className="text-xs text-gray-400">Visible inside the function</div>
-              <code className="text-xs text-gray-300">function greet() {"{ let msg = ... }"}</code>
+              <div className="text-xs text-gray-400">
+                Visible inside the function
+              </div>
+              <code className="text-xs text-gray-300">
+                function greet() {"{ let msg = ... }"}
+              </code>
             </div>
             <div className="w-full max-w-xs bg-green-900/20 border-2 border-green-500/30 rounded-b-lg p-4 text-center">
               <div className="font-bold text-green-300">Block Scope</div>
-              <div className="text-xs text-gray-400">Visible inside {"{ }"} only (let/const)</div>
-              <code className="text-xs text-gray-300">{"if (true) { let x = 1; }"}</code>
+              <div className="text-xs text-gray-400">
+                Visible inside {"{ }"} only (let/const)
+              </div>
+              <code className="text-xs text-gray-300">
+                {"if (true) { let x = 1; }"}
+              </code>
             </div>
           </div>
           <p className="text-xs text-gray-500 mt-3 text-center">
-            Inner scopes can see outer variables, but never the other way around.
+            Inner scopes can see outer variables, but never the other way
+            around.
           </p>
         </Diagram>
 
@@ -333,8 +369,8 @@ console.log(leaky);  // works -- yikes!`}
         <h2>Data Types: The 7 Primitives + Object</h2>
         <p>
           Every value in JavaScript has a type. There are seven{" "}
-          <strong>primitive</strong> types (simple, immutable values) plus
-          the <strong>Object</strong> type (for complex, mutable data).
+          <strong>primitive</strong> types (simple, immutable values) plus the{" "}
+          <strong>Object</strong> type (for complex, mutable data).
         </p>
 
         <Diagram title="JavaScript Data Types">
@@ -342,10 +378,22 @@ console.log(leaky);  // works -- yikes!`}
             {[
               { name: "String", example: '"hello"', color: "text-green-400" },
               { name: "Number", example: "42, 3.14", color: "text-blue-400" },
-              { name: "Boolean", example: "true / false", color: "text-yellow-400" },
+              {
+                name: "Boolean",
+                example: "true / false",
+                color: "text-yellow-400",
+              },
               { name: "undefined", example: "let x;", color: "text-gray-400" },
-              { name: "null", example: "let x = null;", color: "text-gray-400" },
-              { name: "Symbol", example: "Symbol('id')", color: "text-purple-400" },
+              {
+                name: "null",
+                example: "let x = null;",
+                color: "text-gray-400",
+              },
+              {
+                name: "Symbol",
+                example: "Symbol('id')",
+                color: "text-purple-400",
+              },
               { name: "BigInt", example: "42n", color: "text-purple-400" },
               { name: "Object", example: "{ }, [ ]", color: "text-orange-400" },
             ].map((t) => (
@@ -359,7 +407,8 @@ console.log(leaky);  // works -- yikes!`}
             ))}
           </div>
           <p className="text-xs text-gray-500 mt-3 text-center">
-            The first seven are primitives. Object is the complex type (arrays and functions are objects too).
+            The first seven are primitives. Object is the complex type (arrays
+            and functions are objects too).
           </p>
         </Diagram>
 
@@ -424,33 +473,45 @@ console.log(\`Adult? \${age >= 18}\`);`}
         <h2>Type Coercion: Implicit vs Explicit</h2>
         <p>
           JavaScript is a <strong>loosely typed</strong> language, which means
-          it will sometimes convert values from one type to another behind
-          your back. This is called <strong>implicit coercion</strong>. When
-          you convert deliberately, that is <strong>explicit coercion</strong>.
+          it will sometimes convert values from one type to another behind your
+          back. This is called <strong>implicit coercion</strong>. When you
+          convert deliberately, that is <strong>explicit coercion</strong>.
         </p>
 
         <Diagram title="Implicit Coercion Cheat Sheet">
           <div className="space-y-3">
             <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-3">
-              <div className="font-bold text-red-300 text-sm mb-1">The + Trap</div>
-              <div className="text-sm text-gray-300">
-                When one side of <code>+</code> is a string, JS converts the other side to a string too.
+              <div className="font-bold text-red-300 text-sm mb-1">
+                The + Trap
               </div>
-              <code className="text-xs text-gray-400">"5" + 3 &rarr; "53" (string!)</code>
+              <div className="text-sm text-gray-300">
+                When one side of <code>+</code> is a string, JS converts the
+                other side to a string too.
+              </div>
+              <code className="text-xs text-gray-400">
+                "5" + 3 &rarr; "53" (string!)
+              </code>
             </div>
             <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-3">
-              <div className="font-bold text-green-300 text-sm mb-1">Other math operators</div>
-              <div className="text-sm text-gray-300">
-                <code>-</code>, <code>*</code>, <code>/</code> convert strings to numbers.
+              <div className="font-bold text-green-300 text-sm mb-1">
+                Other math operators
               </div>
-              <code className="text-xs text-gray-400">"5" - 3 &rarr; 2 (number!)</code>
+              <div className="text-sm text-gray-300">
+                <code>-</code>, <code>*</code>, <code>/</code> convert strings
+                to numbers.
+              </div>
+              <code className="text-xs text-gray-400">
+                "5" - 3 &rarr; 2 (number!)
+              </code>
             </div>
             <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-3">
-              <div className="font-bold text-yellow-300 text-sm mb-1">Falsy values</div>
+              <div className="font-bold text-yellow-300 text-sm mb-1">
+                Falsy values
+              </div>
               <div className="text-sm text-gray-300">
-                These are all treated as <code>false</code>:{" "}
-                <code>0</code>, <code>""</code>, <code>null</code>,{" "}
-                <code>undefined</code>, <code>NaN</code>, <code>false</code>
+                These are all treated as <code>false</code>: <code>0</code>,{" "}
+                <code>""</code>, <code>null</code>, <code>undefined</code>,{" "}
+                <code>NaN</code>, <code>false</code>
               </div>
             </div>
           </div>
@@ -480,29 +541,57 @@ console.log(parseInt("42px")); // 42 (stops at non-digit)`}
         <h2>== vs === : Strict Equality Matters</h2>
         <p>
           JavaScript has two equality operators. The triple-equals{" "}
-          <code>===</code> checks both value <em>and</em> type (strict).
-          The double-equals <code>==</code> converts types first (loose),
-          which leads to surprising results.
+          <code>===</code> checks both value <em>and</em> type (strict). The
+          double-equals <code>==</code> converts types first (loose), which
+          leads to surprising results.
         </p>
 
         <Diagram title="== vs === Comparison">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
-              <div className="font-bold text-green-300 mb-2">=== Strict (use this!)</div>
+              <div className="font-bold text-green-300 mb-2">
+                === Strict (use this!)
+              </div>
               <ul className="text-sm text-gray-300 space-y-1">
-                <li><code>5 === "5"</code> &rarr; <span className="text-red-400">false</span></li>
-                <li><code>true === 1</code> &rarr; <span className="text-red-400">false</span></li>
-                <li><code>null === undefined</code> &rarr; <span className="text-red-400">false</span></li>
-                <li><code>5 === 5</code> &rarr; <span className="text-green-400">true</span></li>
+                <li>
+                  <code>5 === "5"</code> &rarr;{" "}
+                  <span className="text-red-400">false</span>
+                </li>
+                <li>
+                  <code>true === 1</code> &rarr;{" "}
+                  <span className="text-red-400">false</span>
+                </li>
+                <li>
+                  <code>null === undefined</code> &rarr;{" "}
+                  <span className="text-red-400">false</span>
+                </li>
+                <li>
+                  <code>5 === 5</code> &rarr;{" "}
+                  <span className="text-green-400">true</span>
+                </li>
               </ul>
             </div>
             <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4">
-              <div className="font-bold text-red-300 mb-2">== Loose (avoid!)</div>
+              <div className="font-bold text-red-300 mb-2">
+                == Loose (avoid!)
+              </div>
               <ul className="text-sm text-gray-300 space-y-1">
-                <li><code>5 == "5"</code> &rarr; <span className="text-green-400">true</span> (coerces!)</li>
-                <li><code>true == 1</code> &rarr; <span className="text-green-400">true</span> (coerces!)</li>
-                <li><code>0 == ""</code> &rarr; <span className="text-green-400">true</span> (!!)</li>
-                <li><code>"" == "0"</code> &rarr; <span className="text-red-400">false</span> (?!)</li>
+                <li>
+                  <code>5 == "5"</code> &rarr;{" "}
+                  <span className="text-green-400">true</span> (coerces!)
+                </li>
+                <li>
+                  <code>true == 1</code> &rarr;{" "}
+                  <span className="text-green-400">true</span> (coerces!)
+                </li>
+                <li>
+                  <code>0 == ""</code> &rarr;{" "}
+                  <span className="text-green-400">true</span> (!!)
+                </li>
+                <li>
+                  <code>"" == "0"</code> &rarr;{" "}
+                  <span className="text-red-400">false</span> (?!)
+                </li>
               </ul>
             </div>
           </div>
@@ -526,8 +615,8 @@ console.log("" == "0");     // false -- inconsistent!`}
 
         <InfoBox type="warning">
           <strong>Rule #1 of JavaScript:</strong> always use <code>===</code>{" "}
-          and <code>!==</code>. There is almost never a good reason to use
-          loose equality.
+          and <code>!==</code>. There is almost never a good reason to use loose
+          equality.
         </InfoBox>
       </section>
 
@@ -535,15 +624,40 @@ console.log("" == "0");     // false -- inconsistent!`}
       <section>
         <h2>Key Takeaways</h2>
         <ul>
-          <li>JavaScript makes web pages interactive. It runs in browsers and on servers.</li>
-          <li>Use <code>defer</code> when linking scripts in <code>&lt;head&gt;</code>.</li>
-          <li><code>console.log()</code> is your primary debugging tool.</li>
-          <li>Use <code>const</code> by default, <code>let</code> when you need to reassign, never <code>var</code>.</li>
-          <li><code>let</code>/<code>const</code> are block-scoped; <code>var</code> is function-scoped.</li>
-          <li>7 primitive types: string, number, boolean, null, undefined, symbol, bigint.</li>
-          <li>Be aware of type coercion -- JS sneakily converts types with <code>+</code> and in boolean contexts.</li>
-          <li>Always use <code>===</code>, never <code>==</code>.</li>
-          <li>Template literals (<code>{"`${}`"}</code>) are the modern way to build strings.</li>
+          <li>
+            JavaScript makes web pages interactive. It runs in browsers and on
+            servers.
+          </li>
+          <li>
+            Use <code>defer</code> when linking scripts in{" "}
+            <code>&lt;head&gt;</code>.
+          </li>
+          <li>
+            <code>console.log()</code> is your primary debugging tool.
+          </li>
+          <li>
+            Use <code>const</code> by default, <code>let</code> when you need to
+            reassign, never <code>var</code>.
+          </li>
+          <li>
+            <code>let</code>/<code>const</code> are block-scoped;{" "}
+            <code>var</code> is function-scoped.
+          </li>
+          <li>
+            7 primitive types: string, number, boolean, null, undefined, symbol,
+            bigint.
+          </li>
+          <li>
+            Be aware of type coercion -- JS sneakily converts types with{" "}
+            <code>+</code> and in boolean contexts.
+          </li>
+          <li>
+            Always use <code>===</code>, never <code>==</code>.
+          </li>
+          <li>
+            Template literals (<code>{"`${}`"}</code>) are the modern way to
+            build strings.
+          </li>
         </ul>
       </section>
 
@@ -578,47 +692,64 @@ console.log("" == "0");     // false -- inconsistent!`}
           <code>typeof</code>:
         </p>
         <ul>
-          <li><code>"5" + 3</code></li>
-          <li><code>"5" - 3</code></li>
-          <li><code>true + true</code></li>
-          <li><code>"10" * "2"</code></li>
-          <li><code>5 === "5"</code></li>
-          <li><code>5 == "5"</code></li>
-          <li><code>null == undefined</code></li>
-          <li><code>null === undefined</code></li>
-          <li><code>Boolean(0)</code></li>
-          <li><code>Boolean("0")</code></li>
+          <li>
+            <code>"5" + 3</code>
+          </li>
+          <li>
+            <code>"5" - 3</code>
+          </li>
+          <li>
+            <code>true + true</code>
+          </li>
+          <li>
+            <code>"10" * "2"</code>
+          </li>
+          <li>
+            <code>5 === "5"</code>
+          </li>
+          <li>
+            <code>5 == "5"</code>
+          </li>
+          <li>
+            <code>null == undefined</code>
+          </li>
+          <li>
+            <code>null === undefined</code>
+          </li>
+          <li>
+            <code>Boolean(0)</code>
+          </li>
+          <li>
+            <code>Boolean("0")</code>
+          </li>
         </ul>
         <p>How many did you predict correctly?</p>
       </ExerciseBlock>
 
       <ExerciseBlock number={3}>
-        <p>
-          Build a "User Profile Card" generator using template literals:
-        </p>
+        <p>Build a "User Profile Card" generator using template literals:</p>
         <ul>
           <li>
-            Declare variables for: first name, last name, age, email, city,
-            and an <code>isVerified</code> boolean.
+            Declare variables for: first name, last name, age, email, city, and
+            an <code>isVerified</code> boolean.
           </li>
           <li>
             Use template literals to log a formatted card. The "Verified" line
             should show "Yes" or "No" using a ternary:{" "}
-            <code>{"${isVerified ? \"Yes\" : \"No\"}"}</code>
+            <code>{'${isVerified ? "Yes" : "No"}'}</code>
           </li>
         </ul>
       </ExerciseBlock>
 
       <HomeworkBlock>
         <p>
-          Create an HTML page linked to an external JS file. Complete all
-          parts:
+          Create an HTML page linked to an external JS file. Complete all parts:
         </p>
         <ul>
           <li>
             <strong>Part 1 -- Variables:</strong> Declare at least 8 variables
-            using <code>const</code>/<code>let</code> covering all common
-            types. Log each with its type.
+            using <code>const</code>/<code>let</code> covering all common types.
+            Log each with its type.
           </li>
           <li>
             <strong>Part 2 -- Coercion:</strong> Show 5 implicit and 5 explicit
@@ -626,8 +757,8 @@ console.log("" == "0");     // false -- inconsistent!`}
           </li>
           <li>
             <strong>Part 3 -- Equality:</strong> Write 6 comparisons where{" "}
-            <code>===</code> and <code>==</code> give different results.
-            Explain each.
+            <code>===</code> and <code>==</code> give different results. Explain
+            each.
           </li>
           <li>
             <strong>Part 4 -- Template Literals:</strong> Create a "Product
@@ -637,8 +768,8 @@ console.log("" == "0");     // false -- inconsistent!`}
           </li>
           <li>
             <strong>Part 5 -- Scope:</strong> Demonstrate block scope with{" "}
-            <code>let</code> inside an <code>if</code> block. Show the
-            variable is inaccessible outside (comment out with explanation).
+            <code>let</code> inside an <code>if</code> block. Show the variable
+            is inaccessible outside (comment out with explanation).
           </li>
         </ul>
       </HomeworkBlock>

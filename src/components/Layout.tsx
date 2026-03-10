@@ -29,9 +29,7 @@ const Layout = () => {
               />
             </svg>
           </button>
-          <span className="ml-3 font-semibold text-gray-800">
-            BTU Frontend
-          </span>
+          <span className="ml-3 font-semibold text-gray-800">BTU Frontend</span>
         </header>
 
         <main className="flex-1 overflow-y-auto">

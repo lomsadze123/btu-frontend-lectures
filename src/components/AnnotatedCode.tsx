@@ -53,7 +53,11 @@ const AnnotatedCode = ({ segments, title }: AnnotatedCodeProps) => {
               )}
               <span
                 className={
-                  isActive ? "text-indigo-300" : hasAnnotation ? "text-gray-200" : "text-gray-400"
+                  isActive
+                    ? "text-indigo-300"
+                    : hasAnnotation
+                      ? "text-gray-200"
+                      : "text-gray-400"
                 }
               >
                 {seg.code}
@@ -66,9 +70,7 @@ const AnnotatedCode = ({ segments, title }: AnnotatedCodeProps) => {
       {/* Annotation panel */}
       {activeIndex !== null && segments[activeIndex]?.annotation && (
         <div className="border-t-2 border-sky-400 bg-sky-50 px-5 py-4 flex gap-3 items-start">
-          <span className="text-sky-500 text-lg mt-0.5 shrink-0">
-            &#9656;
-          </span>
+          <span className="text-sky-500 text-lg mt-0.5 shrink-0">&#9656;</span>
           <div>
             {segments[activeIndex].label && (
               <span className="text-xs font-bold text-sky-600 uppercase tracking-wide block mb-1.5">

@@ -13,8 +13,8 @@ const Lecture15 = () => {
       <section>
         <h2>Why Does the Web Need Memory?</h2>
         <p>
-          Here is a fun fact: by default, websites have <strong>amnesia</strong>.
-          Every time you refresh the page, everything resets. Your dark mode
+          Here is a fun fact: by default, websites have <strong>amnesia</strong>
+          . Every time you refresh the page, everything resets. Your dark mode
           preference? Gone. Your shopping cart? Empty. That form you were
           filling out? Vanished.
         </p>
@@ -95,14 +95,18 @@ const Lecture15 = () => {
               label: "Path",
             },
             { code: '";\n\n' },
-            { code: "// Reading cookies -- you get ALL of them as one string!\n" },
+            {
+              code: "// Reading cookies -- you get ALL of them as one string!\n",
+            },
             {
               code: "const allCookies = document.cookie;",
               annotation:
                 "Reading cookies gives you ONE BIG STRING with all cookies separated by '; '. You have to parse it yourself -- the API is not friendly!",
               label: "Read All",
             },
-            { code: '\n// Result: "username=Ana; theme=dark; language=en"\n\n' },
+            {
+              code: '\n// Result: "username=Ana; theme=dark; language=en"\n\n',
+            },
             { code: "// Deleting a cookie: set max-age to 0\n" },
             {
               code: 'document.cookie = "username=; max-age=0; path=/";',
@@ -177,10 +181,7 @@ console.log("missing:", getCookie("pizza"));`}
                 color: "bg-red-50 border-red-300",
               },
             ].map((item, i) => (
-              <div
-                key={i}
-                className={`p-4 rounded-lg border-2 ${item.color}`}
-              >
+              <div key={i} className={`p-4 rounded-lg border-2 ${item.color}`}>
                 <code className="font-bold text-gray-800 text-sm">
                   {item.method}
                 </code>
@@ -452,9 +453,7 @@ console.log("Saved in localStorage:", localStorage.getItem("demo-theme"));`}
               </ul>
             </div>
             <div className="flex-1 bg-red-50 rounded-xl p-5 border-2 border-red-300">
-              <h4 className="font-bold text-red-700 mb-3">
-                NEVER store these
-              </h4>
+              <h4 className="font-bold text-red-700 mb-3">NEVER store these</h4>
               <ul className="space-y-2 text-sm text-red-800">
                 <li>Passwords</li>
                 <li>Credit card numbers</li>
@@ -468,10 +467,12 @@ console.log("Saved in localStorage:", localStorage.getItem("demo-theme"));`}
         </Diagram>
 
         <InfoBox type="warning">
-          <strong>NEVER store sensitive data in localStorage or
-          sessionStorage!</strong> Any JavaScript on your page can read it --
-          including malicious scripts injected through XSS attacks. For auth
-          tokens, use HttpOnly cookies that JavaScript cannot read.
+          <strong>
+            NEVER store sensitive data in localStorage or sessionStorage!
+          </strong>{" "}
+          Any JavaScript on your page can read it -- including malicious scripts
+          injected through XSS attacks. For auth tokens, use HttpOnly cookies
+          that JavaScript cannot read.
         </InfoBox>
       </section>
 
@@ -501,7 +502,8 @@ console.log("Saved in localStorage:", localStorage.getItem("demo-theme"));`}
             <strong>Settings Dashboard:</strong> Build a settings page where the
             user can choose: theme (dark/light), font size (small/medium/large),
             and accent color. Save all settings in localStorage as a single JSON
-            object. Apply the settings immediately and restore them on page load.
+            object. Apply the settings immediately and restore them on page
+            load.
           </p>
         </ExerciseBlock>
       </section>
@@ -518,9 +520,7 @@ console.log("Saved in localStorage:", localStorage.getItem("demo-theme"));`}
           <li>Click a todo to toggle done/undone.</li>
           <li>Each todo has a delete button.</li>
           <li>All todos persist in localStorage across page refreshes.</li>
-          <li>
-            Add filters: "All", "Active", "Completed" buttons.
-          </li>
+          <li>Add filters: "All", "Active", "Completed" buttons.</li>
           <li>Show a count: "X items remaining" (active only).</li>
           <li>"Clear Completed" button removes all done todos.</li>
           <li>
@@ -529,10 +529,9 @@ console.log("Saved in localStorage:", localStorage.getItem("demo-theme"));`}
           </li>
         </ol>
         <InfoBox type="tip">
-          Structure your todos as{" "}
-          <code>{"[{ id, text, completed }]"}</code>. Write a{" "}
-          <code>saveTodos()</code> and <code>renderTodos()</code> function.
-          Every change should update both the DOM and localStorage.
+          Structure your todos as <code>{"[{ id, text, completed }]"}</code>.
+          Write a <code>saveTodos()</code> and <code>renderTodos()</code>{" "}
+          function. Every change should update both the DOM and localStorage.
         </InfoBox>
       </HomeworkBlock>
     </LectureWrapper>

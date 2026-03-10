@@ -25,7 +25,9 @@ const Lecture03 = () => {
         <Diagram title="Block vs Inline vs Inline-Block">
           <div className="space-y-6">
             <div>
-              <div className="font-bold text-gray-800 mb-2">Block Elements — The Wall Hoggers</div>
+              <div className="font-bold text-gray-800 mb-2">
+                Block Elements — The Wall Hoggers
+              </div>
               <div className="space-y-2">
                 <div className="bg-blue-500 text-white rounded-lg p-3 text-center text-sm">
                   Block A — I take the whole row
@@ -35,28 +37,46 @@ const Lecture03 = () => {
                 </div>
               </div>
               <p className="text-xs text-gray-500 mt-1">
-                Common: &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;-&lt;h6&gt;, &lt;section&gt;
+                Common: &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;-&lt;h6&gt;,
+                &lt;section&gt;
               </p>
             </div>
 
             <div>
-              <div className="font-bold text-gray-800 mb-2">Inline Elements — The Shelf Items</div>
+              <div className="font-bold text-gray-800 mb-2">
+                Inline Elements — The Shelf Items
+              </div>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-green-500 text-white rounded px-3 py-1 text-sm">Inline A</span>
-                <span className="bg-green-500 text-white rounded px-3 py-1 text-sm">Inline B</span>
-                <span className="bg-green-500 text-white rounded px-3 py-1 text-sm">Inline C</span>
+                <span className="bg-green-500 text-white rounded px-3 py-1 text-sm">
+                  Inline A
+                </span>
+                <span className="bg-green-500 text-white rounded px-3 py-1 text-sm">
+                  Inline B
+                </span>
+                <span className="bg-green-500 text-white rounded px-3 py-1 text-sm">
+                  Inline C
+                </span>
               </div>
               <p className="text-xs text-gray-500 mt-1">
-                Common: &lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt; — NO width/height!
+                Common: &lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt; — NO
+                width/height!
               </p>
             </div>
 
             <div>
-              <div className="font-bold text-gray-800 mb-2">Inline-Block — Best of Both Worlds</div>
+              <div className="font-bold text-gray-800 mb-2">
+                Inline-Block — Best of Both Worlds
+              </div>
               <div className="flex flex-wrap gap-2">
-                <div className="bg-red-500 text-white rounded-lg w-28 h-14 flex items-center justify-center text-sm">IB Box A</div>
-                <div className="bg-red-500 text-white rounded-lg w-28 h-14 flex items-center justify-center text-sm">IB Box B</div>
-                <div className="bg-red-500 text-white rounded-lg w-28 h-14 flex items-center justify-center text-sm">IB Box C</div>
+                <div className="bg-red-500 text-white rounded-lg w-28 h-14 flex items-center justify-center text-sm">
+                  IB Box A
+                </div>
+                <div className="bg-red-500 text-white rounded-lg w-28 h-14 flex items-center justify-center text-sm">
+                  IB Box B
+                </div>
+                <div className="bg-red-500 text-white rounded-lg w-28 h-14 flex items-center justify-center text-sm">
+                  IB Box C
+                </div>
               </div>
               <p className="text-xs text-gray-500 mt-1">
                 Side by side like inline, but you CAN set width and height!
@@ -70,9 +90,8 @@ const Lecture03 = () => {
       <section>
         <h2>Interactive Display Demo</h2>
         <p>
-          Play with the toggles below to see how different display values
-          affect elements in real time. This is the best way to build
-          intuition!
+          Play with the toggles below to see how different display values affect
+          elements in real time. This is the best way to build intuition!
         </p>
 
         <DisplayDemo />
@@ -85,25 +104,53 @@ const Lecture03 = () => {
                   <th className="p-3 text-left rounded-tl-lg">Property</th>
                   <th className="p-3 text-center">block</th>
                   <th className="p-3 text-center">inline</th>
-                  <th className="p-3 text-center rounded-tr-lg">inline-block</th>
+                  <th className="p-3 text-center rounded-tr-lg">
+                    inline-block
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {[
                   { prop: "New line?", block: true, inline: false, ib: false },
-                  { prop: "Full width?", block: true, inline: false, ib: false },
-                  { prop: "Set width/height?", block: true, inline: false, ib: true },
-                  { prop: "Vertical margin?", block: true, inline: false, ib: true },
+                  {
+                    prop: "Full width?",
+                    block: true,
+                    inline: false,
+                    ib: false,
+                  },
+                  {
+                    prop: "Set width/height?",
+                    block: true,
+                    inline: false,
+                    ib: true,
+                  },
+                  {
+                    prop: "Vertical margin?",
+                    block: true,
+                    inline: false,
+                    ib: true,
+                  },
                 ].map((row, i) => (
-                  <tr key={row.prop} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="p-3 font-medium text-gray-700 border-b border-gray-100">{row.prop}</td>
-                    <td className={`p-3 text-center border-b border-gray-100 font-bold ${row.block ? "text-green-600" : "text-red-500"}`}>
+                  <tr
+                    key={row.prop}
+                    className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                  >
+                    <td className="p-3 font-medium text-gray-700 border-b border-gray-100">
+                      {row.prop}
+                    </td>
+                    <td
+                      className={`p-3 text-center border-b border-gray-100 font-bold ${row.block ? "text-green-600" : "text-red-500"}`}
+                    >
                       {row.block ? "Yes" : "No"}
                     </td>
-                    <td className={`p-3 text-center border-b border-gray-100 font-bold ${row.inline ? "text-green-600" : "text-red-500"}`}>
+                    <td
+                      className={`p-3 text-center border-b border-gray-100 font-bold ${row.inline ? "text-green-600" : "text-red-500"}`}
+                    >
                       {row.inline ? "Yes" : "No"}
                     </td>
-                    <td className={`p-3 text-center border-b border-gray-100 font-bold ${row.ib ? "text-green-600" : "text-red-500"}`}>
+                    <td
+                      className={`p-3 text-center border-b border-gray-100 font-bold ${row.ib ? "text-green-600" : "text-red-500"}`}
+                    >
                       {row.ib ? "Yes" : "No"}
                     </td>
                   </tr>
@@ -126,22 +173,32 @@ const Lecture03 = () => {
         <h2>The CSS Box Model — Every Element is a Box!</h2>
         <p>
           Here is one of the most important concepts in CSS: every single
-          element on a web page is a rectangular <strong>box</strong>. Even
-          that round button? A box with rounded corners. That text? A box. The
-          box model describes the layers that make up each box:
+          element on a web page is a rectangular <strong>box</strong>. Even that
+          round button? A box with rounded corners. That text? A box. The box
+          model describes the layers that make up each box:
         </p>
 
         <Diagram title="The Four Layers of Every Box">
           <div className="flex flex-col items-center">
             <div className="bg-orange-100 border-2 border-orange-300 rounded-xl p-6 w-full max-w-md text-center">
-              <div className="text-xs font-bold text-orange-600 mb-2">MARGIN — space outside the border</div>
+              <div className="text-xs font-bold text-orange-600 mb-2">
+                MARGIN — space outside the border
+              </div>
               <div className="bg-yellow-100 border-2 border-yellow-400 rounded-lg p-5">
-                <div className="text-xs font-bold text-yellow-700 mb-2">BORDER — the frame itself</div>
+                <div className="text-xs font-bold text-yellow-700 mb-2">
+                  BORDER — the frame itself
+                </div>
                 <div className="bg-green-100 border-2 border-green-400 rounded-lg p-4">
-                  <div className="text-xs font-bold text-green-700 mb-2">PADDING — breathing room inside</div>
+                  <div className="text-xs font-bold text-green-700 mb-2">
+                    PADDING — breathing room inside
+                  </div>
                   <div className="bg-blue-200 border-2 border-blue-400 rounded p-4">
-                    <div className="font-bold text-blue-800 text-sm">CONTENT</div>
-                    <div className="text-xs text-blue-600">your text, image, etc.</div>
+                    <div className="font-bold text-blue-800 text-sm">
+                      CONTENT
+                    </div>
+                    <div className="text-xs text-blue-600">
+                      your text, image, etc.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -167,31 +224,36 @@ const Lecture03 = () => {
           segments={[
             {
               code: ".card {",
-              annotation: "This is a class selector targeting elements with class='card'. All box model properties go inside.",
+              annotation:
+                "This is a class selector targeting elements with class='card'. All box model properties go inside.",
               label: "Selector",
             },
             { code: "\n  " },
             {
               code: "width: 280px;",
-              annotation: "Sets the width of the CONTENT area. In content-box mode, padding and border are added ON TOP of this. In border-box mode, everything fits inside 280px.",
+              annotation:
+                "Sets the width of the CONTENT area. In content-box mode, padding and border are added ON TOP of this. In border-box mode, everything fits inside 280px.",
               label: "Width",
             },
             { code: "\n  " },
             {
               code: "padding: 20px;",
-              annotation: "Adds 20px of space INSIDE the border on all four sides. Padding creates breathing room between the content and the border.",
+              annotation:
+                "Adds 20px of space INSIDE the border on all four sides. Padding creates breathing room between the content and the border.",
               label: "Padding",
             },
             { code: "\n  " },
             {
               code: "border: 3px solid #3498db;",
-              annotation: "Shorthand for border-width, border-style, and border-color. The border sits between padding and margin.",
+              annotation:
+                "Shorthand for border-width, border-style, and border-color. The border sits between padding and margin.",
               label: "Border",
             },
             { code: "\n  " },
             {
               code: "margin: 20px auto;",
-              annotation: "20px on top and bottom, 'auto' on left and right. The 'auto' trick centers the element horizontally inside its parent!",
+              annotation:
+                "20px on top and bottom, 'auto' on left and right. The 'auto' trick centers the element horizontally inside its parent!",
               label: "Margin",
             },
             { code: "\n}" },
@@ -204,13 +266,15 @@ const Lecture03 = () => {
             { code: "/* Each side individually */\n" },
             {
               code: "margin-top: 20px;\nmargin-right: 15px;\nmargin-bottom: 20px;\nmargin-left: 15px;",
-              annotation: "You can set each side separately. This is verbose but very explicit.",
+              annotation:
+                "You can set each side separately. This is verbose but very explicit.",
               label: "Individual Sides",
             },
             { code: "\n\n/* " },
             {
               code: "Shorthand: top right bottom left (clockwise!)",
-              annotation: "Think of a clock: starts at 12 (top), goes to 3 (right), then 6 (bottom), then 9 (left). Same shorthand works for padding!",
+              annotation:
+                "Think of a clock: starts at 12 (top), goes to 3 (right), then 6 (bottom), then 9 (left). Same shorthand works for padding!",
               label: "Clockwise Rule",
             },
             { code: " */\n" },
@@ -218,7 +282,8 @@ const Lecture03 = () => {
             { code: "/* " },
             {
               code: "Two values: vertical horizontal",
-              annotation: "First value = top AND bottom, second value = left AND right. Most commonly used shorthand.",
+              annotation:
+                "First value = top AND bottom, second value = left AND right. Most commonly used shorthand.",
               label: "Two Values",
             },
             { code: " */\n" },
@@ -248,34 +313,48 @@ const Lecture03 = () => {
         <Diagram title="content-box vs border-box — Same Width, Different Results!">
           <div className="space-y-4">
             <div className="border-2 border-red-400 bg-red-50 rounded-xl p-4">
-              <div className="font-bold text-red-700 mb-2">content-box (default)</div>
+              <div className="font-bold text-red-700 mb-2">
+                content-box (default)
+              </div>
               <div className="text-sm text-gray-700">
                 <code>width: 300px</code> + padding: 20px + border: 5px
               </div>
               <div className="font-mono text-red-600 font-bold mt-1">
                 Actual width = 300 + 20 + 20 + 5 + 5 = 350px!
               </div>
-              <div className="mt-2 bg-red-200 rounded h-3" style={{ width: "100%" }}></div>
-              <div className="text-xs text-gray-500 mt-1">The box is WIDER than 300px</div>
+              <div
+                className="mt-2 bg-red-200 rounded h-3"
+                style={{ width: "100%" }}
+              ></div>
+              <div className="text-xs text-gray-500 mt-1">
+                The box is WIDER than 300px
+              </div>
             </div>
 
             <div className="border-2 border-green-400 bg-green-50 rounded-xl p-4">
-              <div className="font-bold text-green-700 mb-2">border-box (recommended)</div>
+              <div className="font-bold text-green-700 mb-2">
+                border-box (recommended)
+              </div>
               <div className="text-sm text-gray-700">
                 <code>width: 300px</code> + padding: 20px + border: 5px
               </div>
               <div className="font-mono text-green-600 font-bold mt-1">
                 Total width = EXACTLY 300px (padding & border fit inside)
               </div>
-              <div className="mt-2 bg-green-200 rounded h-3" style={{ width: "85.7%" }}></div>
-              <div className="text-xs text-gray-500 mt-1">The box is exactly what you asked for</div>
+              <div
+                className="mt-2 bg-green-200 rounded h-3"
+                style={{ width: "85.7%" }}
+              ></div>
+              <div className="text-xs text-gray-500 mt-1">
+                The box is exactly what you asked for
+              </div>
             </div>
           </div>
         </Diagram>
 
         <InfoBox type="tip">
-          Most professional developers apply <code>border-box</code> globally
-          at the top of every project. It just makes life so much easier!
+          Most professional developers apply <code>border-box</code> globally at
+          the top of every project. It just makes life so much easier!
         </InfoBox>
 
         <AnnotatedCode
@@ -284,10 +363,13 @@ const Lecture03 = () => {
             { code: "/* Apply border-box to ALL elements */\n" },
             {
               code: "*, *::before, *::after {\n  box-sizing: border-box;\n}",
-              annotation: "The * selector targets EVERY element. ::before and ::after are pseudo-elements (we will learn these later). This reset makes width mean 'total width' everywhere. Put this at the top of every project!",
+              annotation:
+                "The * selector targets EVERY element. ::before and ::after are pseudo-elements (we will learn these later). This reset makes width mean 'total width' everywhere. Put this at the top of every project!",
               label: "Universal Reset",
             },
-            { code: "\n\n/* Now width: 300px means EXACTLY 300px. No more math! */" },
+            {
+              code: "\n\n/* Now width: 300px means EXACTLY 300px. No more math! */",
+            },
           ]}
         />
       </section>
@@ -307,49 +389,57 @@ const Lecture03 = () => {
           segments={[
             {
               code: "<form",
-              annotation: "The form element wraps all input fields. It can have 'action' (where data goes) and 'method' (GET or POST) attributes.",
+              annotation:
+                "The form element wraps all input fields. It can have 'action' (where data goes) and 'method' (GET or POST) attributes.",
               label: "Form Tag",
             },
-            { code: " action=\"/submit\" method=\"POST\">\n\n  " },
+            { code: ' action="/submit" method="POST">\n\n  ' },
             {
-              code: "<label for=\"name\">Full Name:</label>",
-              annotation: "Labels describe what each field is for. The 'for' attribute must match the input's 'id'. Clicking the label focuses the input — great for accessibility!",
+              code: '<label for="name">Full Name:</label>',
+              annotation:
+                "Labels describe what each field is for. The 'for' attribute must match the input's 'id'. Clicking the label focuses the input — great for accessibility!",
               label: "Label",
             },
             { code: "\n  " },
             {
-              code: "<input type=\"text\" id=\"name\" placeholder=\"Enter your name\" required />",
-              annotation: "A text input field. 'type' determines what kind of input (text, email, number...). 'placeholder' shows hint text. 'required' prevents empty submission.",
+              code: '<input type="text" id="name" placeholder="Enter your name" required />',
+              annotation:
+                "A text input field. 'type' determines what kind of input (text, email, number...). 'placeholder' shows hint text. 'required' prevents empty submission.",
               label: "Text Input",
             },
-            { code: "\n\n  <label for=\"email\">Email:</label>\n  " },
+            { code: '\n\n  <label for="email">Email:</label>\n  ' },
             {
-              code: "<input type=\"email\" id=\"email\" placeholder=\"you@example.com\" />",
-              annotation: "The 'email' type adds built-in validation — the browser checks for an @ symbol and valid format. No JavaScript needed!",
+              code: '<input type="email" id="email" placeholder="you@example.com" />',
+              annotation:
+                "The 'email' type adds built-in validation — the browser checks for an @ symbol and valid format. No JavaScript needed!",
               label: "Email Input",
             },
-            { code: "\n\n  <label for=\"pass\">Password:</label>\n  " },
+            { code: '\n\n  <label for="pass">Password:</label>\n  ' },
             {
-              code: "<input type=\"password\" id=\"pass\" />",
-              annotation: "Password type hides the characters as dots. The data is NOT encrypted — that is handled by HTTPS on the server side.",
+              code: '<input type="password" id="pass" />',
+              annotation:
+                "Password type hides the characters as dots. The data is NOT encrypted — that is handled by HTTPS on the server side.",
               label: "Password Input",
             },
-            { code: "\n\n  <label for=\"country\">Country:</label>\n  " },
+            { code: '\n\n  <label for="country">Country:</label>\n  ' },
             {
-              code: "<select id=\"country\">\n    <option value=\"ge\">Georgia</option>\n    <option value=\"us\">United States</option>\n  </select>",
-              annotation: "A dropdown menu. Each <option> is one choice. The 'value' is what gets sent to the server, the text between tags is what the user sees.",
+              code: '<select id="country">\n    <option value="ge">Georgia</option>\n    <option value="us">United States</option>\n  </select>',
+              annotation:
+                "A dropdown menu. Each <option> is one choice. The 'value' is what gets sent to the server, the text between tags is what the user sees.",
               label: "Select Dropdown",
             },
             { code: "\n\n  " },
             {
-              code: "<textarea id=\"bio\" rows=\"3\" placeholder=\"Tell us about yourself...\"></textarea>",
-              annotation: "A multi-line text area. Use 'rows' to set the visible height. Unlike <input>, textarea has a closing tag.",
+              code: '<textarea id="bio" rows="3" placeholder="Tell us about yourself..."></textarea>',
+              annotation:
+                "A multi-line text area. Use 'rows' to set the visible height. Unlike <input>, textarea has a closing tag.",
               label: "Textarea",
             },
             { code: "\n\n  " },
             {
-              code: "<button type=\"submit\">Register</button>",
-              annotation: "The submit button sends the form data to the URL specified in the form's 'action' attribute. type='reset' would clear all fields instead.",
+              code: '<button type="submit">Register</button>',
+              annotation:
+                "The submit button sends the form data to the URL specified in the form's 'action' attribute. type='reset' would clear all fields instead.",
               label: "Submit Button",
             },
             { code: "\n\n</form>" },
@@ -359,15 +449,51 @@ const Lecture03 = () => {
         <Diagram title="Form Input Types Cheat Sheet">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {[
-              { type: "text", desc: "Regular text field", color: "bg-blue-50 border-blue-200" },
-              { type: "email", desc: "Validates email format", color: "bg-green-50 border-green-200" },
-              { type: "password", desc: "Hides characters", color: "bg-orange-50 border-orange-200" },
-              { type: "number", desc: "Numbers only + min/max", color: "bg-pink-50 border-pink-200" },
-              { type: "date", desc: "Date picker", color: "bg-cyan-50 border-cyan-200" },
-              { type: "checkbox", desc: "Toggle on/off", color: "bg-purple-50 border-purple-200" },
-              { type: "radio", desc: "Pick one from group", color: "bg-indigo-50 border-indigo-200" },
-              { type: "color", desc: "Color picker!", color: "bg-yellow-50 border-yellow-200" },
-              { type: "tel", desc: "Phone number", color: "bg-teal-50 border-teal-200" },
+              {
+                type: "text",
+                desc: "Regular text field",
+                color: "bg-blue-50 border-blue-200",
+              },
+              {
+                type: "email",
+                desc: "Validates email format",
+                color: "bg-green-50 border-green-200",
+              },
+              {
+                type: "password",
+                desc: "Hides characters",
+                color: "bg-orange-50 border-orange-200",
+              },
+              {
+                type: "number",
+                desc: "Numbers only + min/max",
+                color: "bg-pink-50 border-pink-200",
+              },
+              {
+                type: "date",
+                desc: "Date picker",
+                color: "bg-cyan-50 border-cyan-200",
+              },
+              {
+                type: "checkbox",
+                desc: "Toggle on/off",
+                color: "bg-purple-50 border-purple-200",
+              },
+              {
+                type: "radio",
+                desc: "Pick one from group",
+                color: "bg-indigo-50 border-indigo-200",
+              },
+              {
+                type: "color",
+                desc: "Color picker!",
+                color: "bg-yellow-50 border-yellow-200",
+              },
+              {
+                type: "tel",
+                desc: "Phone number",
+                color: "bg-teal-50 border-teal-200",
+              },
             ].map((input) => (
               <div
                 key={input.type}
@@ -402,8 +528,14 @@ const Lecture03 = () => {
           <div className="space-y-3">
             {[
               { step: "1", text: "Visit figma.com and create a free account" },
-              { step: "2", text: "The Inspect panel (right sidebar) shows CSS-like properties for any selected element" },
-              { step: "3", text: "Extract exact values for colors, font sizes, spacing — do not guess!" },
+              {
+                step: "2",
+                text: "The Inspect panel (right sidebar) shows CSS-like properties for any selected element",
+              },
+              {
+                step: "3",
+                text: "Extract exact values for colors, font sizes, spacing — do not guess!",
+              },
             ].map((item) => (
               <div
                 key={item.step}
@@ -431,10 +563,13 @@ const Lecture03 = () => {
         <h2>Exercises</h2>
 
         <ExerciseBlock number={1}>
-          <p>Create <code>display.html</code> with CSS:</p>
+          <p>
+            Create <code>display.html</code> with CSS:
+          </p>
           <ul>
             <li>
-              Three divs styled as block (different background colors, full width)
+              Three divs styled as block (different background colors, full
+              width)
             </li>
             <li>
               Three spans styled as inline (notice you cannot set width/height)
@@ -447,7 +582,9 @@ const Lecture03 = () => {
         </ExerciseBlock>
 
         <ExerciseBlock number={2}>
-          <p>Create <code>boxmodel.html</code>:</p>
+          <p>
+            Create <code>boxmodel.html</code>:
+          </p>
           <ul>
             <li>
               Two cards side by side (inline-block), each with width: 300px,
@@ -465,15 +602,19 @@ const Lecture03 = () => {
         </ExerciseBlock>
 
         <ExerciseBlock number={3}>
-          <p>Create a styled <code>contact-form.html</code>:</p>
+          <p>
+            Create a styled <code>contact-form.html</code>:
+          </p>
           <ul>
             <li>
-              Fields: name (text), email, phone (tel), subject (select dropdown),
-              message (textarea)
+              Fields: name (text), email, phone (tel), subject (select
+              dropdown), message (textarea)
             </li>
             <li>All fields must have proper labels</li>
             <li>Add a "Subscribe" checkbox and submit/reset buttons</li>
-            <li>Style with external CSS: padding, border, consistent spacing</li>
+            <li>
+              Style with external CSS: padding, border, consistent spacing
+            </li>
           </ul>
         </ExerciseBlock>
       </section>
@@ -483,7 +624,9 @@ const Lecture03 = () => {
         <h3>Styled Registration Form</h3>
         <p>Build a registration form page with an external CSS file:</p>
         <ol>
-          <li>Apply the global <code>box-sizing: border-box</code> reset</li>
+          <li>
+            Apply the global <code>box-sizing: border-box</code> reset
+          </li>
           <li>
             Create a centered form card (max-width 500px, centered with margin
             auto) with padding, border, and subtle background
@@ -492,12 +635,17 @@ const Lecture03 = () => {
             Include at least 6 input types: text, email, password, number, date,
             and a select dropdown
           </li>
-          <li>Add a textarea, checkbox, radio buttons, and submit/reset buttons</li>
           <li>
-            Every field must have a label. Use <code>required</code> on mandatory
-            fields
+            Add a textarea, checkbox, radio buttons, and submit/reset buttons
           </li>
-          <li>Style inputs with consistent width (100%), padding, margin, and border</li>
+          <li>
+            Every field must have a label. Use <code>required</code> on
+            mandatory fields
+          </li>
+          <li>
+            Style inputs with consistent width (100%), padding, margin, and
+            border
+          </li>
         </ol>
       </HomeworkBlock>
     </LectureWrapper>

@@ -7,10 +7,7 @@ import Diagram from "../../components/Diagram";
 
 const Lecture02 = () => {
   return (
-    <LectureWrapper
-      id="02"
-      title="Semantic HTML, Media & CSS Introduction"
-    >
+    <LectureWrapper id="02" title="Semantic HTML, Media & CSS Introduction">
       {/* ── Semantic HTML ── */}
       <section>
         <h2>Why Semantic HTML Matters</h2>
@@ -22,30 +19,50 @@ const Lecture02 = () => {
         <p>
           Think of a newspaper. Even without reading the words, you can tell
           which part is the headline, the sidebar, and the footer just by where
-          they are. <strong>Semantic HTML</strong> does the same thing for
-          your code — it gives meaningful names to page regions so browsers,
-          search engines, and screen readers instantly understand your structure.
+          they are. <strong>Semantic HTML</strong> does the same thing for your
+          code — it gives meaningful names to page regions so browsers, search
+          engines, and screen readers instantly understand your structure.
         </p>
 
         <Diagram title="Non-Semantic vs Semantic">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="bg-red-50 border-2 border-red-300 rounded-xl p-4">
-              <div className="font-bold text-red-700 mb-3">Bad (Non-Semantic)</div>
-              <div className="space-y-2 font-mono text-sm text-red-600">
-                <div className="bg-red-100 rounded px-3 py-1">&lt;div id="top-bar"&gt;...&lt;/div&gt;</div>
-                <div className="bg-red-100 rounded px-3 py-1">&lt;div id="stuff"&gt;...&lt;/div&gt;</div>
-                <div className="bg-red-100 rounded px-3 py-1">&lt;div id="bottom"&gt;...&lt;/div&gt;</div>
+              <div className="font-bold text-red-700 mb-3">
+                Bad (Non-Semantic)
               </div>
-              <p className="text-sm text-gray-500 mt-3">Tells us nothing about content!</p>
+              <div className="space-y-2 font-mono text-sm text-red-600">
+                <div className="bg-red-100 rounded px-3 py-1">
+                  &lt;div id="top-bar"&gt;...&lt;/div&gt;
+                </div>
+                <div className="bg-red-100 rounded px-3 py-1">
+                  &lt;div id="stuff"&gt;...&lt;/div&gt;
+                </div>
+                <div className="bg-red-100 rounded px-3 py-1">
+                  &lt;div id="bottom"&gt;...&lt;/div&gt;
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 mt-3">
+                Tells us nothing about content!
+              </p>
             </div>
             <div className="bg-green-50 border-2 border-green-300 rounded-xl p-4">
-              <div className="font-bold text-green-700 mb-3">Good (Semantic)</div>
-              <div className="space-y-2 font-mono text-sm text-green-700">
-                <div className="bg-green-100 rounded px-3 py-1">&lt;header&gt;...&lt;/header&gt;</div>
-                <div className="bg-green-100 rounded px-3 py-1">&lt;main&gt;...&lt;/main&gt;</div>
-                <div className="bg-green-100 rounded px-3 py-1">&lt;footer&gt;...&lt;/footer&gt;</div>
+              <div className="font-bold text-green-700 mb-3">
+                Good (Semantic)
               </div>
-              <p className="text-sm text-gray-500 mt-3">Clear, meaningful, accessible!</p>
+              <div className="space-y-2 font-mono text-sm text-green-700">
+                <div className="bg-green-100 rounded px-3 py-1">
+                  &lt;header&gt;...&lt;/header&gt;
+                </div>
+                <div className="bg-green-100 rounded px-3 py-1">
+                  &lt;main&gt;...&lt;/main&gt;
+                </div>
+                <div className="bg-green-100 rounded px-3 py-1">
+                  &lt;footer&gt;...&lt;/footer&gt;
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 mt-3">
+                Clear, meaningful, accessible!
+              </p>
             </div>
           </div>
         </Diagram>
@@ -62,12 +79,36 @@ const Lecture02 = () => {
         <Diagram title="The Semantic Elements Family">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {[
-              { tag: "<header>", desc: "Logo, nav, site title", color: "bg-blue-500" },
-              { tag: "<nav>", desc: "Navigation links", color: "bg-purple-500" },
-              { tag: "<main>", desc: "Primary content (only one!)", color: "bg-red-500" },
-              { tag: "<section>", desc: "Thematic grouping", color: "bg-yellow-500" },
-              { tag: "<article>", desc: "Self-contained content", color: "bg-teal-500" },
-              { tag: "<aside>", desc: "Sidebar, related info", color: "bg-orange-500" },
+              {
+                tag: "<header>",
+                desc: "Logo, nav, site title",
+                color: "bg-blue-500",
+              },
+              {
+                tag: "<nav>",
+                desc: "Navigation links",
+                color: "bg-purple-500",
+              },
+              {
+                tag: "<main>",
+                desc: "Primary content (only one!)",
+                color: "bg-red-500",
+              },
+              {
+                tag: "<section>",
+                desc: "Thematic grouping",
+                color: "bg-yellow-500",
+              },
+              {
+                tag: "<article>",
+                desc: "Self-contained content",
+                color: "bg-teal-500",
+              },
+              {
+                tag: "<aside>",
+                desc: "Sidebar, related info",
+                color: "bg-orange-500",
+              },
             ].map((item) => (
               <div
                 key={item.tag}
@@ -79,70 +120,89 @@ const Lecture02 = () => {
             ))}
             <div className="col-span-2 sm:col-span-3 bg-gray-800 text-white rounded-xl p-4 text-center">
               <div className="font-bold font-mono text-sm">&lt;footer&gt;</div>
-              <div className="text-xs mt-1 opacity-90">Copyright, contact, social links</div>
+              <div className="text-xs mt-1 opacity-90">
+                Copyright, contact, social links
+              </div>
             </div>
           </div>
         </Diagram>
 
         <p>
-          Now let's see how they all fit together in a real page layout.
-          Click on the highlighted parts to understand:
+          Now let's see how they all fit together in a real page layout. Click
+          on the highlighted parts to understand:
         </p>
 
         <AnnotatedCode
           title="A Full Semantic Page Structure"
           segments={[
-            { code: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <title>My Blog</title>\n</head>\n<body>\n\n" },
+            {
+              code: '<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8" />\n  <title>My Blog</title>\n</head>\n<body>\n\n',
+            },
             {
               code: "<header>",
-              annotation: "The page header — typically holds the logo, site title, and navigation. Usually appears at the top of the page.",
+              annotation:
+                "The page header — typically holds the logo, site title, and navigation. Usually appears at the top of the page.",
               label: "Header",
             },
             { code: "\n  <h1>My Blog</h1>\n  " },
             {
               code: "<nav>",
-              annotation: "Navigation — a container specifically for navigation links. Screen readers can jump directly to this section.",
+              annotation:
+                "Navigation — a container specifically for navigation links. Screen readers can jump directly to this section.",
               label: "Nav",
             },
-            { code: "\n    <a href=\"#\">Home</a>\n    <a href=\"#\">About</a>\n    <a href=\"#\">Contact</a>\n  </nav>\n</header>\n\n" },
+            {
+              code: '\n    <a href="#">Home</a>\n    <a href="#">About</a>\n    <a href="#">Contact</a>\n  </nav>\n</header>\n\n',
+            },
             {
               code: "<main>",
-              annotation: "The main content area. Only ONE per page. Contains the primary content that is unique to this page.",
+              annotation:
+                "The main content area. Only ONE per page. Contains the primary content that is unique to this page.",
               label: "Main",
             },
             { code: "\n  " },
             {
               code: "<section>",
-              annotation: "A thematic group of content. Use it when a chunk of content has its own heading and topic.",
+              annotation:
+                "A thematic group of content. Use it when a chunk of content has its own heading and topic.",
               label: "Section",
             },
             { code: "\n    <h2>Latest Posts</h2>\n    " },
             {
               code: "<article>",
-              annotation: "Self-contained content that could stand on its own — like a blog post, news story, or comment. Could be syndicated (shared) independently.",
+              annotation:
+                "Self-contained content that could stand on its own — like a blog post, news story, or comment. Could be syndicated (shared) independently.",
               label: "Article",
             },
-            { code: "\n      <h3>Learning HTML</h3>\n      <p>HTML is the skeleton of every web page...</p>\n    </article>\n  </section>\n\n  " },
+            {
+              code: "\n      <h3>Learning HTML</h3>\n      <p>HTML is the skeleton of every web page...</p>\n    </article>\n  </section>\n\n  ",
+            },
             {
               code: "<aside>",
-              annotation: "Content tangentially related to the main content — sidebar, pull quotes, ads, author bios. Not essential to the main story.",
+              annotation:
+                "Content tangentially related to the main content — sidebar, pull quotes, ads, author bios. Not essential to the main story.",
               label: "Aside",
             },
-            { code: "\n    <h3>About the Author</h3>\n    <p>A front-end student at BTU.</p>\n  </aside>\n</main>\n\n" },
+            {
+              code: "\n    <h3>About the Author</h3>\n    <p>A front-end student at BTU.</p>\n  </aside>\n</main>\n\n",
+            },
             {
               code: "<footer>",
-              annotation: "The page footer — copyright notice, links to terms/privacy, contact info. Appears at the bottom.",
+              annotation:
+                "The page footer — copyright notice, links to terms/privacy, contact info. Appears at the bottom.",
               label: "Footer",
             },
-            { code: "\n  <p>&copy; 2026 My Blog. All rights reserved.</p>\n</footer>\n\n</body>\n</html>" },
+            {
+              code: "\n  <p>&copy; 2026 My Blog. All rights reserved.</p>\n</footer>\n\n</body>\n</html>",
+            },
           ]}
         />
 
         <InfoBox type="tip">
           A good rule of thumb: if you can replace a <code>&lt;div&gt;</code>{" "}
-          with a more descriptive tag (<code>header</code>,{" "}
-          <code>section</code>, <code>article</code>, etc.), you should. Your
-          future self (and search engines) will thank you.
+          with a more descriptive tag (<code>header</code>, <code>section</code>
+          , <code>article</code>, etc.), you should. Your future self (and
+          search engines) will thank you.
         </InfoBox>
       </section>
 
@@ -165,19 +225,22 @@ const Lecture02 = () => {
           segments={[
             {
               code: "<video",
-              annotation: "The video tag embeds a video player directly in the page. No plugins or Flash needed — it is built into HTML5.",
+              annotation:
+                "The video tag embeds a video player directly in the page. No plugins or Flash needed — it is built into HTML5.",
               label: "Video Tag",
             },
             { code: " " },
             {
-              code: "width=\"640\" height=\"360\"",
-              annotation: "Sets the dimensions of the video player in pixels. You can also use CSS for sizing.",
+              code: 'width="640" height="360"',
+              annotation:
+                "Sets the dimensions of the video player in pixels. You can also use CSS for sizing.",
               label: "Dimensions",
             },
             { code: " " },
             {
               code: "controls",
-              annotation: "Adds play/pause buttons, volume slider, progress bar, and fullscreen toggle. Without this, users cannot control playback!",
+              annotation:
+                "Adds play/pause buttons, volume slider, progress bar, and fullscreen toggle. Without this, users cannot control playback!",
               label: "Controls",
             },
             {
@@ -185,8 +248,9 @@ const Lecture02 = () => {
             },
             { code: "\n  " },
             {
-              code: "<source src=\"video.mp4\" type=\"video/mp4\" />",
-              annotation: "Points to the video file. The type attribute helps the browser know the format. You can add multiple sources for different formats as fallbacks.",
+              code: '<source src="video.mp4" type="video/mp4" />',
+              annotation:
+                "Points to the video file. The type attribute helps the browser know the format. You can add multiple sources for different formats as fallbacks.",
               label: "Source",
             },
             { code: "\n  Your browser does not support the video element.\n" },
@@ -197,8 +261,16 @@ const Lecture02 = () => {
         <Diagram title="Video Attributes Cheat Sheet">
           <div className="flex flex-wrap gap-3">
             {[
-              { attr: "controls", desc: "Play/pause buttons", color: "bg-blue-500" },
-              { attr: "autoplay", desc: "Starts automatically", color: "bg-red-500" },
+              {
+                attr: "controls",
+                desc: "Play/pause buttons",
+                color: "bg-blue-500",
+              },
+              {
+                attr: "autoplay",
+                desc: "Starts automatically",
+                color: "bg-red-500",
+              },
               { attr: "muted", desc: "Starts silent", color: "bg-yellow-600" },
               { attr: "loop", desc: "Repeats forever", color: "bg-green-500" },
               { attr: "poster", desc: "Preview image", color: "bg-purple-500" },
@@ -224,22 +296,27 @@ const Lecture02 = () => {
           segments={[
             {
               code: "<audio controls>",
-              annotation: "The audio tag embeds a music/sound player. The controls attribute adds play/pause and volume. Works just like video but for sound files.",
+              annotation:
+                "The audio tag embeds a music/sound player. The controls attribute adds play/pause and volume. Works just like video but for sound files.",
               label: "Audio Tag",
             },
             { code: "\n  " },
             {
-              code: "<source src=\"song.mp3\" type=\"audio/mpeg\" />",
-              annotation: "MP3 is the most widely supported audio format. You can add multiple sources as fallback for older browsers.",
+              code: '<source src="song.mp3" type="audio/mpeg" />',
+              annotation:
+                "MP3 is the most widely supported audio format. You can add multiple sources as fallback for older browsers.",
               label: "MP3 Source",
             },
             { code: "\n  " },
             {
-              code: "<source src=\"song.ogg\" type=\"audio/ogg\" />",
-              annotation: "OGG is an open-source alternative. Including both MP3 and OGG ensures maximum browser compatibility.",
+              code: '<source src="song.ogg" type="audio/ogg" />',
+              annotation:
+                "OGG is an open-source alternative. Including both MP3 and OGG ensures maximum browser compatibility.",
               label: "OGG Fallback",
             },
-            { code: "\n  Your browser does not support the audio element.\n</audio>" },
+            {
+              code: "\n  Your browser does not support the audio element.\n</audio>",
+            },
           ]}
         />
 
@@ -255,25 +332,29 @@ const Lecture02 = () => {
           segments={[
             {
               code: "<iframe",
-              annotation: "An iframe (inline frame) embeds an entire external page inside your page. It is like a window into another website — YouTube, Google Maps, CodePen, and more.",
+              annotation:
+                "An iframe (inline frame) embeds an entire external page inside your page. It is like a window into another website — YouTube, Google Maps, CodePen, and more.",
               label: "iframe",
             },
             { code: "\n  " },
             {
-              code: "width=\"560\" height=\"315\"",
-              annotation: "Dimensions of the embedded video player. YouTube provides default values of 560x315.",
+              code: 'width="560" height="315"',
+              annotation:
+                "Dimensions of the embedded video player. YouTube provides default values of 560x315.",
               label: "Dimensions",
             },
             { code: "\n  " },
             {
-              code: "src=\"https://www.youtube.com/embed/VIDEO_ID\"",
-              annotation: "The embed URL. Note it uses /embed/ — not the regular youtube.com/watch URL. YouTube gives you this when you click Share > Embed.",
+              code: 'src="https://www.youtube.com/embed/VIDEO_ID"',
+              annotation:
+                "The embed URL. Note it uses /embed/ — not the regular youtube.com/watch URL. YouTube gives you this when you click Share > Embed.",
               label: "Source URL",
             },
             { code: "\n  " },
             {
               code: "allowfullscreen",
-              annotation: "Allows the viewer to expand the video to fullscreen mode.",
+              annotation:
+                "Allows the viewer to expand the video to fullscreen mode.",
               label: "Fullscreen",
             },
             { code: "\n></iframe>" },
@@ -336,10 +417,16 @@ const Lecture02 = () => {
                 className={`border-2 ${m.color} rounded-xl p-4`}
               >
                 <div className="font-bold text-gray-800">{m.method}</div>
-                <div className="text-sm text-gray-600 mt-1">Where: {m.where}</div>
+                <div className="text-sm text-gray-600 mt-1">
+                  Where: {m.where}
+                </div>
                 <div className="flex gap-3 mt-2 text-xs">
-                  <span className={`${m.badge} px-2 py-0.5 rounded-full`}>Pro: {m.pro}</span>
-                  <span className="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Con: {m.con}</span>
+                  <span className={`${m.badge} px-2 py-0.5 rounded-full`}>
+                    Pro: {m.pro}
+                  </span>
+                  <span className="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+                    Con: {m.con}
+                  </span>
                 </div>
               </div>
             ))}
@@ -352,8 +439,9 @@ const Lecture02 = () => {
           segments={[
             { code: "<p " },
             {
-              code: "style=\"color: red; font-size: 24px; font-weight: bold;\"",
-              annotation: "The style attribute lets you write CSS directly on any HTML element. Quick for testing, but terrible for real projects — imagine changing the color of 50 elements one by one!",
+              code: 'style="color: red; font-size: 24px; font-weight: bold;"',
+              annotation:
+                "The style attribute lets you write CSS directly on any HTML element. Quick for testing, but terrible for real projects — imagine changing the color of 50 elements one by one!",
               label: "Style Attribute",
             },
             { code: ">\n  I am styled with inline CSS\n</p>" },
@@ -367,16 +455,20 @@ const Lecture02 = () => {
             { code: "<head>\n  " },
             {
               code: "<style>",
-              annotation: "The <style> tag goes inside <head>. All CSS rules inside apply to the whole page. Good for single-page experiments.",
+              annotation:
+                "The <style> tag goes inside <head>. All CSS rules inside apply to the whole page. Good for single-page experiments.",
               label: "Style Tag",
             },
             { code: "\n    " },
             {
               code: "h1 { color: navy; text-align: center; }",
-              annotation: "This is a CSS rule. 'h1' is the selector (what to style), and the properties inside { } define how to style it.",
+              annotation:
+                "This is a CSS rule. 'h1' is the selector (what to style), and the properties inside { } define how to style it.",
               label: "CSS Rule",
             },
-            { code: "\n    p { font-size: 16px; color: #555; }\n  </style>\n</head>" },
+            {
+              code: "\n    p { font-size: 16px; color: #555; }\n  </style>\n</head>",
+            },
           ]}
         />
 
@@ -386,8 +478,9 @@ const Lecture02 = () => {
           segments={[
             { code: "<head>\n  " },
             {
-              code: "<link rel=\"stylesheet\" href=\"styles.css\" />",
-              annotation: "This links an external CSS file to your HTML page. 'rel' says it is a stylesheet, 'href' points to the file. This is the recommended approach — keeps HTML and CSS separate and lets you share one CSS file across multiple pages.",
+              code: '<link rel="stylesheet" href="styles.css" />',
+              annotation:
+                "This links an external CSS file to your HTML page. 'rel' says it is a stylesheet, 'href' points to the file. This is the recommended approach — keeps HTML and CSS separate and lets you share one CSS file across multiple pages.",
               label: "Link Tag",
             },
             { code: "\n</head>" },
@@ -408,8 +501,8 @@ const Lecture02 = () => {
         <h2>CSS Selectors — Targeting the Right Elements</h2>
         <p>
           A <strong>selector</strong> tells CSS WHICH elements to style. Think
-          of it as a search query: "find all paragraphs", "find the element
-          with this class", etc.
+          of it as a search query: "find all paragraphs", "find the element with
+          this class", etc.
         </p>
 
         <Diagram title="CSS Selectors Cheat Sheet">
@@ -456,13 +549,17 @@ const Lecture02 = () => {
                 className={`${sel.color} border-2 rounded-lg p-3 flex flex-col sm:flex-row sm:items-center gap-2`}
               >
                 <div className="sm:w-40 shrink-0">
-                  <div className="font-bold text-gray-800 text-sm">{sel.name}</div>
+                  <div className="font-bold text-gray-800 text-sm">
+                    {sel.name}
+                  </div>
                 </div>
                 <code className="text-sm bg-gray-800 text-green-400 px-3 py-1 rounded shrink-0">
                   {sel.syntax}
                 </code>
                 <div className="text-sm text-gray-600">{sel.desc}</div>
-                <div className="text-xs text-gray-400 ml-auto hidden sm:block">{sel.example}</div>
+                <div className="text-xs text-gray-400 ml-auto hidden sm:block">
+                  {sel.example}
+                </div>
               </div>
             ))}
           </div>
@@ -475,7 +572,8 @@ const Lecture02 = () => {
             { code: "/* " },
             {
               code: "Element Selector",
-              annotation: "Targets ALL <p> elements on the page. Every paragraph will get this font size and color.",
+              annotation:
+                "Targets ALL <p> elements on the page. Every paragraph will get this font size and color.",
               label: "Element",
             },
             { code: " */\n" },
@@ -483,35 +581,47 @@ const Lecture02 = () => {
             { code: "/* " },
             {
               code: "Class Selector",
-              annotation: "Targets any element with class=\"highlight\". Classes start with a dot (.) and can be reused on multiple elements. This is the workhorse of CSS!",
+              annotation:
+                'Targets any element with class="highlight". Classes start with a dot (.) and can be reused on multiple elements. This is the workhorse of CSS!',
               label: "Class",
             },
             { code: " */\n" },
-            { code: ".highlight {\n  background-color: #fff3cd;\n  padding: 4px 8px;\n  border-radius: 4px;\n}\n\n" },
+            {
+              code: ".highlight {\n  background-color: #fff3cd;\n  padding: 4px 8px;\n  border-radius: 4px;\n}\n\n",
+            },
             { code: "/* " },
             {
               code: "ID Selector",
-              annotation: "Targets the ONE element with id=\"main-title\". IDs start with a hash (#) and must be unique on the page. Use sparingly — prefer classes for styling.",
+              annotation:
+                'Targets the ONE element with id="main-title". IDs start with a hash (#) and must be unique on the page. Use sparingly — prefer classes for styling.',
               label: "ID",
             },
             { code: " */\n" },
-            { code: "#main-title {\n  font-size: 32px;\n  color: #8e44ad;\n  text-transform: uppercase;\n}\n\n" },
+            {
+              code: "#main-title {\n  font-size: 32px;\n  color: #8e44ad;\n  text-transform: uppercase;\n}\n\n",
+            },
             { code: "/* " },
             {
               code: "Descendant Selector",
-              annotation: "Targets <a> tags ONLY when they are inside <nav>. Links elsewhere on the page are not affected. The space between nav and a means 'inside'.",
+              annotation:
+                "Targets <a> tags ONLY when they are inside <nav>. Links elsewhere on the page are not affected. The space between nav and a means 'inside'.",
               label: "Descendant",
             },
             { code: " */\n" },
-            { code: "nav a {\n  color: white;\n  text-decoration: none;\n  padding: 8px 16px;\n}\n\n" },
+            {
+              code: "nav a {\n  color: white;\n  text-decoration: none;\n  padding: 8px 16px;\n}\n\n",
+            },
             { code: "/* " },
             {
               code: "Grouping Selector",
-              annotation: "Applies the same styles to multiple selectors at once. Use commas to separate them. Saves you from repeating the same CSS.",
+              annotation:
+                "Applies the same styles to multiple selectors at once. Use commas to separate them. Saves you from repeating the same CSS.",
               label: "Grouping",
             },
             { code: " */\n" },
-            { code: "h1, h2, h3 {\n  font-family: Georgia, serif;\n  color: #2c3e50;\n}" },
+            {
+              code: "h1, h2, h3 {\n  font-family: Georgia, serif;\n  color: #2c3e50;\n}",
+            },
           ]}
         />
 
@@ -535,9 +645,21 @@ const Lecture02 = () => {
         <Diagram title="Getting Started with GitHub">
           <div className="space-y-3">
             {[
-              { step: "1", text: "Create a free account at github.com", icon: "+" },
-              { step: "2", text: "Create a new repository (project folder in the cloud)", icon: ">" },
-              { step: "3", text: "Upload your HTML/CSS files using the \"Upload files\" button", icon: "^" },
+              {
+                step: "1",
+                text: "Create a free account at github.com",
+                icon: "+",
+              },
+              {
+                step: "2",
+                text: "Create a new repository (project folder in the cloud)",
+                icon: ">",
+              },
+              {
+                step: "3",
+                text: 'Upload your HTML/CSS files using the "Upload files" button',
+                icon: "^",
+              },
             ].map((item) => (
               <div
                 key={item.step}
@@ -571,8 +693,8 @@ const Lecture02 = () => {
               A <code>&lt;header&gt;</code> with an h1 and a nav (3 links)
             </li>
             <li>
-              A <code>&lt;main&gt;</code> containing two sections, each with
-              an h2 and a paragraph
+              A <code>&lt;main&gt;</code> containing two sections, each with an
+              h2 and a paragraph
             </li>
             <li>
               An <code>&lt;aside&gt;</code> with an "About the Author" blurb
@@ -591,8 +713,8 @@ const Lecture02 = () => {
             <li>Embed a YouTube video using an iframe</li>
             <li>Add an audio element</li>
             <li>
-              Style the page with an external CSS file: center content, add
-              a background color, style the heading
+              Style the page with an external CSS file: center content, add a
+              background color, style the heading
             </li>
           </ul>
         </ExerciseBlock>
@@ -607,9 +729,9 @@ const Lecture02 = () => {
               and one of them id <code>special</code>
             </li>
             <li>
-              In CSS: element selector for base font, class selector for
-              yellow background, ID selector for bold+red, descendant selector
-              for nav links
+              In CSS: element selector for base font, class selector for yellow
+              background, ID selector for bold+red, descendant selector for nav
+              links
             </li>
           </ul>
         </ExerciseBlock>

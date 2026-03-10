@@ -14,8 +14,8 @@ const Lecture01 = () => {
         <p>
           Hey there! Welcome to the <strong>BTU Front-End Development</strong>{" "}
           course. Over the next 16 weeks, you are going from "what even is
-          HTML?" to building real websites you can show off to friends and future
-          employers.
+          HTML?" to building real websites you can show off to friends and
+          future employers.
         </p>
         <p>
           Today we lay the foundation: how the internet actually delivers pages
@@ -38,9 +38,7 @@ const Lecture01 = () => {
             <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-5 w-36">
               <div className="text-4xl mb-2">You</div>
               <div className="font-bold text-blue-800">Client</div>
-              <div className="text-xs text-gray-500 mt-1">
-                (your browser)
-              </div>
+              <div className="text-xs text-gray-500 mt-1">(your browser)</div>
             </div>
 
             <div className="flex flex-col items-center gap-1">
@@ -169,8 +167,8 @@ const Lecture01 = () => {
           >
             code.visualstudio.com
           </a>
-          . Install the <strong>Live Server</strong> extension — it auto-refreshes
-          your browser when you save.
+          . Install the <strong>Live Server</strong> extension — it
+          auto-refreshes your browser when you save.
         </p>
 
         <h3>Browser DevTools — Your X-Ray Vision</h3>
@@ -228,9 +226,9 @@ const Lecture01 = () => {
               label: "DOCTYPE",
             },
             {
-              code: "<html lang=\"en\">\n",
+              code: '<html lang="en">\n',
               annotation:
-                "The root element — everything on your page goes inside this tag. The lang=\"en\" attribute tells browsers and screen readers the page is in English.",
+                'The root element — everything on your page goes inside this tag. The lang="en" attribute tells browsers and screen readers the page is in English.',
               label: "Root Element",
             },
             {
@@ -241,14 +239,14 @@ const Lecture01 = () => {
             },
             { code: "  " },
             {
-              code: "<meta charset=\"UTF-8\" />",
+              code: '<meta charset="UTF-8" />',
               annotation:
                 "Sets the character encoding to UTF-8, which supports all languages and emojis. Without this, special characters might display as garbage.",
               label: "Charset",
             },
             { code: "\n  " },
             {
-              code: "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
+              code: '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
               annotation:
                 "Makes your page responsive on mobile devices. Without this, phones would zoom way out and show a tiny desktop version.",
               label: "Viewport",
@@ -268,7 +266,9 @@ const Lecture01 = () => {
                 "Everything the user SEES goes here. All your headings, paragraphs, images, links, buttons — all inside the body.",
               label: "Body",
             },
-            { code: "\n  <h1>Welcome!</h1>\n  <p>This is my very first web page.</p>\n" },
+            {
+              code: "\n  <h1>Welcome!</h1>\n  <p>This is my very first web page.</p>\n",
+            },
             { code: "</body>\n</html>" },
           ]}
         />
@@ -304,14 +304,14 @@ const Lecture01 = () => {
             },
             { code: " " },
             {
-              code: "href=\"https://btu.edu.ge\"",
+              code: 'href="https://btu.edu.ge"',
               annotation:
                 "This is an ATTRIBUTE. It provides extra info to the tag. 'href' tells the link WHERE to go. Attributes always use the format: name=\"value\".",
               label: "Attribute",
             },
             { code: " " },
             {
-              code: "target=\"_blank\"",
+              code: 'target="_blank"',
               annotation:
                 "Another attribute! This one tells the browser to open the link in a NEW TAB instead of the same tab.",
               label: "Target",
@@ -412,12 +412,42 @@ const Lecture01 = () => {
         <Diagram title="Heading Levels">
           <div className="space-y-2">
             {[
-              { level: "h1", size: "text-3xl", color: "text-gray-900", desc: "Main Page Title (one per page)" },
-              { level: "h2", size: "text-2xl", color: "text-gray-800", desc: "Major Section" },
-              { level: "h3", size: "text-xl", color: "text-gray-700", desc: "Sub-section" },
-              { level: "h4", size: "text-lg", color: "text-gray-600", desc: "Sub-sub-section" },
-              { level: "h5", size: "text-base", color: "text-gray-500", desc: "Minor heading" },
-              { level: "h6", size: "text-sm", color: "text-gray-400", desc: "Smallest heading" },
+              {
+                level: "h1",
+                size: "text-3xl",
+                color: "text-gray-900",
+                desc: "Main Page Title (one per page)",
+              },
+              {
+                level: "h2",
+                size: "text-2xl",
+                color: "text-gray-800",
+                desc: "Major Section",
+              },
+              {
+                level: "h3",
+                size: "text-xl",
+                color: "text-gray-700",
+                desc: "Sub-section",
+              },
+              {
+                level: "h4",
+                size: "text-lg",
+                color: "text-gray-600",
+                desc: "Sub-sub-section",
+              },
+              {
+                level: "h5",
+                size: "text-base",
+                color: "text-gray-500",
+                desc: "Minor heading",
+              },
+              {
+                level: "h6",
+                size: "text-sm",
+                color: "text-gray-400",
+                desc: "Smallest heading",
+              },
             ].map((h) => (
               <div key={h.level} className="flex items-baseline gap-3">
                 <code className="text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-600 shrink-0 w-10 text-center">
@@ -451,14 +481,14 @@ const Lecture01 = () => {
           segments={[
             { code: "<a " },
             {
-              code: "href=\"https://btu.edu.ge\"",
+              code: 'href="https://btu.edu.ge"',
               annotation:
                 "The href (hypertext reference) is WHERE the link goes. Can be a URL, email (mailto:), phone (tel:), or section ID (#contact).",
               label: "Destination",
             },
             { code: " " },
             {
-              code: "target=\"_blank\"",
+              code: 'target="_blank"',
               annotation:
                 "Opens the link in a new tab. Without this, clicking navigates away from the current page.",
               label: "New Tab",
@@ -478,10 +508,26 @@ const Lecture01 = () => {
         <Diagram title="All Link Types">
           <div className="space-y-3">
             {[
-              { type: "External", code: 'href="https://btu.edu.ge"', desc: "Goes to another website" },
-              { type: "Anchor", code: 'href="#contact"', desc: "Jumps to an element with that id on the same page" },
-              { type: "Email", code: 'href="mailto:info@btu.edu.ge"', desc: "Opens the email app" },
-              { type: "Phone", code: 'href="tel:+995555123456"', desc: "Opens the phone dialer on mobile" },
+              {
+                type: "External",
+                code: 'href="https://btu.edu.ge"',
+                desc: "Goes to another website",
+              },
+              {
+                type: "Anchor",
+                code: 'href="#contact"',
+                desc: "Jumps to an element with that id on the same page",
+              },
+              {
+                type: "Email",
+                code: 'href="mailto:info@btu.edu.ge"',
+                desc: "Opens the email app",
+              },
+              {
+                type: "Phone",
+                code: 'href="tel:+995555123456"',
+                desc: "Opens the phone dialer on mobile",
+              },
             ].map((link) => (
               <div
                 key={link.type}
@@ -513,39 +559,45 @@ const Lecture01 = () => {
         <AnnotatedCode
           title="A Complete Personal Page"
           segments={[
-            { code: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  " },
+            {
+              code: '<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8" />\n  ',
+            },
             {
               code: "<title>My Portfolio</title>",
-              annotation: "Appears in the browser tab and Google search results.",
+              annotation:
+                "Appears in the browser tab and Google search results.",
               label: "Title",
             },
             { code: "\n</head>\n<body>\n\n  " },
             {
               code: "<h1>Nino Mchedlishvili</h1>",
-              annotation: "The main page title. Only ONE h1 per page — most important heading for SEO.",
+              annotation:
+                "The main page title. Only ONE h1 per page — most important heading for SEO.",
               label: "Main Heading",
             },
             { code: "\n  " },
             {
               code: "<hr />",
-              annotation: "Horizontal rule — draws a line across the page. Self-closing (no </hr>).",
+              annotation:
+                "Horizontal rule — draws a line across the page. Self-closing (no </hr>).",
               label: "Separator",
             },
             { code: "\n\n  <h2>About Me</h2>\n  <p>\n    I study " },
             {
               code: "<strong>Front-End Development</strong>",
-              annotation: "Bold + semantic importance. Screen readers will emphasize this.",
+              annotation:
+                "Bold + semantic importance. Screen readers will emphasize this.",
               label: "Strong",
             },
             { code: " at\n    " },
             {
-              code: "<a href=\"https://btu.edu.ge\" target=\"_blank\">BTU</a>",
+              code: '<a href="https://btu.edu.ge" target="_blank">BTU</a>',
               annotation: "External link opening in a new tab.",
               label: "Link",
             },
             { code: ".\n  </p>\n\n  <h2>Contact</h2>\n  <p>\n    " },
             {
-              code: "<a href=\"mailto:nino@example.com\">nino@example.com</a>",
+              code: '<a href="mailto:nino@example.com">nino@example.com</a>',
               annotation: "Email link — opens the default email app.",
               label: "Email",
             },
@@ -555,7 +607,9 @@ const Lecture01 = () => {
               annotation: "Line break — forces text to the next line.",
               label: "Break",
             },
-            { code: "\n    <a href=\"tel:+995555123456\">+995 555 123 456</a>\n  </p>\n\n</body>\n</html>" },
+            {
+              code: '\n    <a href="tel:+995555123456">+995 555 123 456</a>\n  </p>\n\n</body>\n</html>',
+            },
           ]}
         />
       </section>
@@ -570,7 +624,9 @@ const Lecture01 = () => {
             Inside the body:
           </p>
           <ul>
-            <li>An <code>&lt;h1&gt;</code> with your full name</li>
+            <li>
+              An <code>&lt;h1&gt;</code> with your full name
+            </li>
             <li>
               A paragraph using <code>&lt;strong&gt;</code> and{" "}
               <code>&lt;em&gt;</code>
@@ -585,18 +641,30 @@ const Lecture01 = () => {
         <ExerciseBlock number={2}>
           <p>Create a "Favorite Resources" section:</p>
           <ul>
-            <li>An <code>&lt;h2&gt;</code> title</li>
+            <li>
+              An <code>&lt;h2&gt;</code> title
+            </li>
             <li>Three links opening in new tabs</li>
-            <li>Use <code>&lt;br /&gt;</code> between links</li>
+            <li>
+              Use <code>&lt;br /&gt;</code> between links
+            </li>
           </ul>
         </ExerciseBlock>
 
         <ExerciseBlock number={3}>
-          <p>Create <code>article.html</code> as a blog post:</p>
+          <p>
+            Create <code>article.html</code> as a blog post:
+          </p>
           <ul>
-            <li><code>&lt;h1&gt;</code> blog title</li>
-            <li>"Introduction" with <code>&lt;h2&gt;</code></li>
-            <li>"Main Content" with two <code>&lt;h3&gt;</code> sub-sections</li>
+            <li>
+              <code>&lt;h1&gt;</code> blog title
+            </li>
+            <li>
+              "Introduction" with <code>&lt;h2&gt;</code>
+            </li>
+            <li>
+              "Main Content" with two <code>&lt;h3&gt;</code> sub-sections
+            </li>
             <li>"Conclusion" with a link</li>
           </ul>
         </ExerciseBlock>
@@ -605,14 +673,22 @@ const Lecture01 = () => {
       {/* ── Homework ── */}
       <HomeworkBlock>
         <h3>Personal Portfolio Page (Part 1)</h3>
-        <p>Create <code>portfolio.html</code> that includes:</p>
+        <p>
+          Create <code>portfolio.html</code> that includes:
+        </p>
         <ol>
           <li>Proper HTML5 skeleton with a descriptive title</li>
-          <li><code>&lt;h1&gt;</code> with your name and a tagline paragraph</li>
-          <li>Three <code>&lt;h2&gt;</code> sections: "About Me", "Education", "Links"</li>
+          <li>
+            <code>&lt;h1&gt;</code> with your name and a tagline paragraph
+          </li>
+          <li>
+            Three <code>&lt;h2&gt;</code> sections: "About Me", "Education",
+            "Links"
+          </li>
           <li>
             Use <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>,{" "}
-            <code>&lt;br /&gt;</code>, and <code>&lt;hr /&gt;</code> at least once
+            <code>&lt;br /&gt;</code>, and <code>&lt;hr /&gt;</code> at least
+            once
           </li>
           <li>
             Three links: university (new tab), email link, and anchor link to a

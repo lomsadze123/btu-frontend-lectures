@@ -16,9 +16,9 @@ const JsConsole = ({ code, title = "JavaScript Console" }: JsConsoleProps) => {
         logs.push(
           args
             .map((a) =>
-              typeof a === "object" ? JSON.stringify(a, null, 2) : String(a)
+              typeof a === "object" ? JSON.stringify(a, null, 2) : String(a),
             )
-            .join(" ")
+            .join(" "),
         );
       },
     };

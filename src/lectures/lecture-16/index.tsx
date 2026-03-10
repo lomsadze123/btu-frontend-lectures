@@ -14,15 +14,16 @@ const Lecture16 = () => {
         <h2>The Grand Finale!</h2>
         <p>
           This is it -- the last lecture of the course! And we are ending with
-          something you will build in literally every web project for the rest of
-          your career: <strong>forms</strong>. Login forms, registration forms,
-          search bars, checkout pages, contact forms -- they are everywhere.
+          something you will build in literally every web project for the rest
+          of your career: <strong>forms</strong>. Login forms, registration
+          forms, search bars, checkout pages, contact forms -- they are
+          everywhere.
         </p>
         <p>
           Today we will learn how to handle forms with JavaScript, validate user
-          input (and show helpful errors), and use <strong>regular
-          expressions</strong> for pattern matching. Then we will wrap up with a
-          look back at everything you have learned.
+          input (and show helpful errors), and use{" "}
+          <strong>regular expressions</strong> for pattern matching. Then we
+          will wrap up with a look back at everything you have learned.
         </p>
       </section>
 
@@ -67,7 +68,9 @@ const Lecture16 = () => {
             },
             { code: "\n\n" },
             { code: "  console.log(data);\n" },
-            { code: "  // { name: 'Ana', email: 'ana@btu.edu.ge', role: 'student' }\n" },
+            {
+              code: "  // { name: 'Ana', email: 'ana@btu.edu.ge', role: 'student' }\n",
+            },
             { code: "});" },
           ]}
         />
@@ -153,8 +156,9 @@ const Lecture16 = () => {
         <h2>Client-Side Validation: Catching Mistakes Early</h2>
         <p>
           Nobody likes submitting a form only to see "Error!" with no
-          explanation. Good validation gives <strong>instant, helpful
-          feedback</strong> as the user fills out the form.
+          explanation. Good validation gives{" "}
+          <strong>instant, helpful feedback</strong> as the user fills out the
+          form.
         </p>
 
         <JsConsole
@@ -221,8 +225,8 @@ console.log('  "not-an-email" =>', isValidEmail("not-an-email"));     // false`}
         <h2>Regular Expressions: Pattern Matching Superpower</h2>
         <p>
           A <strong>regex</strong> (regular expression) is a pattern that
-          describes what text should look like. Instead of checking character
-          by character, you describe the <em>shape</em> of valid input.
+          describes what text should look like. Instead of checking character by
+          character, you describe the <em>shape</em> of valid input.
         </p>
 
         <Diagram title="Regex Cheat Sheet">
@@ -345,7 +349,7 @@ console.log("\\nFound phones:", phones);`}
             { code: "// Clean up messy phone input\n" },
             { code: 'const dirtyPhone = " +995  (555)  12-34-56 ";\n' },
             {
-              code: "const cleanPhone = dirtyPhone.replace(/[^\\d+]/g, \"\");",
+              code: 'const cleanPhone = dirtyPhone.replace(/[^\\d+]/g, "");',
               annotation:
                 "This regex means: match any character that is NOT a digit (\\d) and NOT a plus sign (+). The 'g' flag means replace ALL matches, not just the first one. Result: '+995555123456'",
               label: "Clean phone",
@@ -431,28 +435,28 @@ console.log("Masked card:", masked);`}
             },
             { code: "\n\n// Step 2: Create validate functions\n" },
             {
-              code: "const validate = (field, value) => {\n  if (!value.trim()) return \"Required\";\n  if (!rules[field].test(value)) return \"Invalid format\";\n  return null; // null = valid\n};",
+              code: 'const validate = (field, value) => {\n  if (!value.trim()) return "Required";\n  if (!rules[field].test(value)) return "Invalid format";\n  return null; // null = valid\n};',
               annotation:
                 "Each validate function returns an error message (string) or null if valid. Check required first, then pattern. This keeps error messages specific and helpful.",
               label: "Validate",
             },
             { code: "\n\n// Step 3: Show/clear errors\n" },
             {
-              code: "const showError = (field, message) => {\n  input.classList.add(\"invalid\");\n  errorDiv.textContent = message;\n};\nconst clearError = (field) => {\n  input.classList.remove(\"invalid\");\n  input.classList.add(\"valid\");\n  errorDiv.textContent = \"\";\n};",
+              code: 'const showError = (field, message) => {\n  input.classList.add("invalid");\n  errorDiv.textContent = message;\n};\nconst clearError = (field) => {\n  input.classList.remove("invalid");\n  input.classList.add("valid");\n  errorDiv.textContent = "";\n};',
               annotation:
                 "Use CSS classes to style valid/invalid inputs (green/red borders). Update a nearby error message div. Always clear previous errors before showing new ones.",
               label: "Show/Clear",
             },
             { code: "\n\n// Step 4: Attach to blur events\n" },
             {
-              code: "input.addEventListener(\"blur\", () => {\n  const error = validate(\"username\", input.value);\n  error ? showError(\"username\", error) : clearError(\"username\");\n});",
+              code: 'input.addEventListener("blur", () => {\n  const error = validate("username", input.value);\n  error ? showError("username", error) : clearError("username");\n});',
               annotation:
                 "Validate on blur (when user leaves the field). This gives immediate feedback without being annoying while the user is still typing.",
               label: "Blur",
             },
             { code: "\n\n// Step 5: Validate all on submit\n" },
             {
-              code: "form.addEventListener(\"submit\", (e) => {\n  e.preventDefault();\n  const allValid = fields.every(f => validate(f, ...) === null);\n  if (allValid) { /* submit! */ }\n});",
+              code: 'form.addEventListener("submit", (e) => {\n  e.preventDefault();\n  const allValid = fields.every(f => validate(f, ...) === null);\n  if (allValid) { /* submit! */ }\n});',
               annotation:
                 "On submit, validate ALL fields at once. Only proceed if every field passes. This catches any fields the user might have skipped.",
               label: "Submit",
@@ -472,8 +476,8 @@ console.log("Masked card:", masked);`}
         <h2>Course Summary: Look How Far You Have Come!</h2>
         <p>
           16 weeks ago, you might not have known what HTML stands for. Now you
-          can build real, interactive websites from scratch. Let us take a moment
-          to appreciate everything you have learned:
+          can build real, interactive websites from scratch. Let us take a
+          moment to appreciate everything you have learned:
         </p>
 
         <Diagram title="Your Frontend Development Journey">
@@ -552,10 +556,7 @@ console.log("Masked card:", masked);`}
                 accent: "text-orange-600",
               },
             ].map((block, i) => (
-              <div
-                key={i}
-                className={`rounded-lg p-4 border ${block.color}`}
-              >
+              <div key={i} className={`rounded-lg p-4 border ${block.color}`}>
                 <div
                   className={`text-xs font-bold uppercase tracking-wide ${block.accent}`}
                 >
@@ -589,7 +590,9 @@ console.log("Masked card:", masked);`}
               </ul>
             </div>
             <div className="flex-1 bg-red-50 rounded-xl p-5 border border-red-200">
-              <h4 className="font-bold text-red-700 mb-3">Avoid These Mistakes</h4>
+              <h4 className="font-bold text-red-700 mb-3">
+                Avoid These Mistakes
+              </h4>
               <ul className="space-y-1 text-sm text-red-800">
                 <li>No inline styles or inline JavaScript in HTML</li>
                 <li>Do not forget e.preventDefault() on forms</li>
@@ -671,18 +674,19 @@ console.log("Masked card:", masked);`}
           <li>Build and validate forms</li>
         </ul>
         <p>
-          These are real, professional skills. The gap between where you are
-          now and a working frontend developer is just{" "}
+          These are real, professional skills. The gap between where you are now
+          and a working frontend developer is just{" "}
           <strong>practice and projects</strong>. Keep building things. Break
-          stuff. Google error messages. That is how every developer on Earth
-          got good at this.
+          stuff. Google error messages. That is how every developer on Earth got
+          good at this.
         </p>
 
         <InfoBox type="tip">
-          The best way to learn is to <strong>build something you care
-          about</strong>. A portfolio site, a project for a friend, a tool that
-          solves a problem you have. The course is over, but your learning
-          journey is just beginning. Good luck, and happy coding!
+          The best way to learn is to{" "}
+          <strong>build something you care about</strong>. A portfolio site, a
+          project for a friend, a tool that solves a problem you have. The
+          course is over, but your learning journey is just beginning. Good
+          luck, and happy coding!
         </InfoBox>
       </section>
 
@@ -742,9 +746,7 @@ console.log("Masked card:", masked);`}
             Show a "profile card" reading data from localStorage after
             registration.
           </li>
-          <li>
-            "Log Out" button clears stored data and shows the form again.
-          </li>
+          <li>"Log Out" button clears stored data and shows the form again.</li>
           <li>
             On page load, check localStorage -- if a user exists, show the
             profile card instead of the form.
