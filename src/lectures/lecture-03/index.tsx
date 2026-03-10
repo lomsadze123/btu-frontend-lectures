@@ -100,7 +100,7 @@ const Lecture03 = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-gray-800 text-white">
+                <tr className="bg-gray-800 text-black">
                   <th className="p-3 text-left rounded-tl-lg">Property</th>
                   <th className="p-3 text-center">block</th>
                   <th className="p-3 text-center">inline</th>
