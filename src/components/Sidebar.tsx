@@ -25,7 +25,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
       )}
 
       <aside
-        className={`fixed top-0 left-0 z-30 h-full w-72 bg-gray-900 text-gray-100 overflow-y-auto transition-transform duration-300 lg:translate-x-0 lg:static lg:z-0 ${
+        className={`fixed top-0 left-0 z-30 h-full w-72 bg-gray-900 text-gray-100 overflow-y-auto transition-transform duration-300 lg:translate-x-0 lg:sticky lg:top-0 lg:h-screen ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
