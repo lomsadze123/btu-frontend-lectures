@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { lectures, type LectureInfo } from "../data/lectures";
 import { shortcutPages } from "../data/shortcuts";
+import { gitTopics } from "../data/git";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -86,6 +87,30 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                     }
                   >
                     {page.title}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mb-4">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-500 px-3 mb-2">
+              Git Basics
+            </h3>
+            <ul className="space-y-1">
+              {gitTopics.map((topic) => (
+                <li key={topic.id}>
+                  <NavLink
+                    to={`/git/${topic.id}`}
+                    onClick={onClose}
+                    className={({ isActive }) =>
+                      `block px-3 py-2 rounded-md text-sm transition-colors ${
+                        isActive
+                          ? "bg-indigo-600 text-white"
+                          : "text-gray-300 hover:bg-gray-800 hover:text-white"
+                      }`
+                    }
+                  >
+                    {topic.title}
                   </NavLink>
                 </li>
               ))}

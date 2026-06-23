@@ -3,10 +3,11 @@ import Prism from "prismjs";
 import "prismjs/components/prism-markup";
 import "prismjs/components/prism-css";
 import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-bash";
 
 interface CodeBlockProps {
   code: string;
-  language: "html" | "css" | "javascript";
+  language: "html" | "css" | "javascript" | "bash";
   title?: string;
 }
 
@@ -14,6 +15,7 @@ const languageMap: Record<string, string> = {
   html: "markup",
   css: "css",
   javascript: "javascript",
+  bash: "bash",
 };
 
 const CodeBlock = ({ code, language, title }: CodeBlockProps) => {
